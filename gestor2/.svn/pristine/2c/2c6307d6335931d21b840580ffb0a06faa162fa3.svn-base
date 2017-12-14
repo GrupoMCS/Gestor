@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+  <head>
+    <?php
+    include('config.php');
+    include 'pagina/includes/head.php';
+    ?>
+  </head>
+  <!--
+  BODY TAG OPTIONS:
+  =================
+  Apply one or more of the following classes to get the
+  desired effect
+  |---------------------------------------------------------|
+  | SKINS         | skin-blue                               |
+  |               | skin-black                              |
+  |               | skin-purple                             |
+  |               | skin-yellow                             |
+  |               | skin-red                                |
+  |               | skin-green                              |
+  |---------------------------------------------------------|
+  |LAYOUT OPTIONS | fixed                                   |
+  |               | layout-boxed                            |
+  |               | layout-top-nav                          |
+  |               | sidebar-collapse                        |
+  |               | sidebar-mini                            |
+  |---------------------------------------------------------|
+  -->
+  <body class="skin-blue layout-boxed">
+    <div class="wrapper">
+
+      <!-- Main Header -->
+          <?php 
+          include 'pagina/includes/header.php';
+          include 'pagina/includes/aside.php';
+          ?>
+
+    <!-- Content Wrapper. En esta div se cargara todo el contenido de la pagina -->
+    <div class ="content-wrapper"><!-- ./wrapper -->
+
+<!--Todo el contenido nuevo en este segmento  -->
+
+    <div class="content">
+      <div class="col-md-13"><!-- ./Esta div pertenece a los proyectos activos -->
+        <div class="box box-default">
+          <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
+            <h3 class="box-title">Proyectos Activos</h3>
+          </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="content-wraper">
+                    <div class="panel-group" id="proyectos_activos">
+
+                        <!--inicio de caja para agregar proyecto-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#activos1">
+                                <h4 class="panel-title">
+                                    <a>MCS2015-001: Gestor</a>
+                                    <div class="progress">
+                                        <div class="progress-bar sm progress-bar-striped active" role="progressbar"
+                                             style="width:40%">40%
+                                        </div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div id="activos1" class="panel-collapse collapse">
+                                <div  class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                        <div class="col-md-3">Gestor de Proyectos</div>
+                                        <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                        <div class="col-md-3">Planeación</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Cliente:</strong></div>
+                                        <div class="col-md-3">Más Más Computers</div>
+                                        <div class="col-md-3"><strong>Entregables:</strong></div>
+                                        <div class="col-md-3">2 de 5</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Responsable:</strong></div>
+                                        <div class="col-md-3">José Martín de Jesús Corrales Pérez</div>
+                                        <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                        <div class="col-md-3">01-Enero-2015</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
+                                        <div class="col-md-3">$10,000.00</div>
+                                        <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
+                                        <div class="col-md-3">Sin Establecer</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3"><strong></strong></div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fin de caja para agregar proyecto-->
+                        <div class="panel panel-default" >
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#activos2">
+                                <h4 class="panel-title">
+                                    <a>MCS2015-002: Pagina WEB</a>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                             style="width:60%">60%
+                                        </div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div id="activos2" class="panel-collapse collapse">
+                                <div  class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                        <div class="col-md-3">Pagina WEB Más Más Computers</div>
+                                        <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                        <div class="col-md-3">Planeación</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Cliente:</strong></div>
+                                        <div class="col-md-3">Más Más Computers</div>
+                                        <div class="col-md-3"><strong>Entregables:</strong></div>
+                                        <div class="col-md-3">2 de 5</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Responsable:</strong></div>
+                                        <div class="col-md-3">Rafael Esparragoza Pérez</div>
+                                        <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                        <div class="col-md-3">01-Enero-2015</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
+                                        <div class="col-md-3">Sin Presupuesto asignado</div>
+                                        <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
+                                        <div class="col-md-3">Sin Establecer</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3"><strong></strong></div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+      </div><!-- /.col -->
+      <div class="col-md-13"><!-- /.Esta div pertenece a los proyectos concluidos -->
+            <div class="box box-default  collapsed-box">
+              <div class="box-header with-border" data-widget="collapse"><i class="fa fa-plus"></i>
+                <h3 class="box-title">Proyectos Concluidos</h3>
+              </div><!-- /.box-header -->
+              <div class="box-body">
+                <div class="content-wraper">
+                  <div class="panel-group" id="proyectos_terminados">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_terminados" href="#terminados1">
+                        <h4 class="panel-title">
+                          <a>MCS2015-003: Proyecto de Prueba 1</a>
+                        </h4>
+                      </div>
+                      <div id="terminados1" class="panel-collapse collapse">
+                          <div  class="panel-body">
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                  <div class="col-md-3">Proyecto de Prueba 1</div>
+                                  <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                  <div class="col-md-3">Concluido</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Cliente:</strong></div>
+                                  <div class="col-md-3">Más Más Computers</div>
+                                  <div class="col-md-3"><strong>Entregables:</strong></div>
+                                  <div class="col-md-3">5 de 5</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Responsable:</strong></div>
+                                  <div class="col-md-3">José Martín de Jesús Corrales Pérez</div>
+                                  <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                  <div class="col-md-3">01-Enero-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Costo Total de Proyecto:</strong></div>
+                                  <div class="col-md-3">$0.00</div>
+                                  <div class="col-md-3"><strong>Fecha de Conclusión:</strong></div>
+                                  <div class="col-md-3">31-Diciembre-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                  <div class="col-md-3"></div>
+                                  <div class="col-md-3"><strong></strong></div>
+                                  <div class="col-md-3"></div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default" >
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_terminados" href="#terminados2">
+                        <h4 class="panel-title">
+                          <a>MCS2015-004: Proyecto de Prueba 2</a>
+                        </h4>
+                      </div>
+                      <div id="terminados2" class="panel-collapse collapse">
+                          <div  class="panel-body">
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                  <div class="col-md-3">Proyecto de Prueba 2</div>
+                                  <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                  <div class="col-md-3">Concluido</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Cliente:</strong></div>
+                                  <div class="col-md-3">Más Más Computers</div>
+                                  <div class="col-md-3"><strong>Entregables:</strong></div>
+                                  <div class="col-md-3">5 de 5</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Responsable:</strong></div>
+                                  <div class="col-md-3">Jesús Enrique Salomon Reyes</div>
+                                  <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                  <div class="col-md-3">01-Enero-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Costo Total de Proyecto:</strong></div>
+                                  <div class="col-md-3">$0.00</div>
+                                  <div class="col-md-3"><strong>Fecha de Conclusión:</strong></div>
+                                  <div class="col-md-3">31-Diciembre-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                  <div class="col-md-3"></div>
+                                  <div class="col-md-3"><strong></strong></div>
+                                  <div class="col-md-3"></div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_terminados" href="#terminados3">
+                        <h4 class="panel-title">
+                          <a>MCS2015-005: Proyecto de Prueba 3</a>
+                        </h4>
+                      </div>
+                      <div id="terminados3" class="panel-collapse collapse">
+                          <div  class="panel-body">
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                  <div class="col-md-3">Proyecto de Prueba 3</div>
+                                  <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                  <div class="col-md-3">Concluido</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Cliente:</strong></div>
+                                  <div class="col-md-3">Más Más Computers</div>
+                                  <div class="col-md-3"><strong>Entregables:</strong></div>
+                                  <div class="col-md-3">5 de 5</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Responsable:</strong></div>
+                                  <div class="col-md-3">José Luis León Salazar</div>
+                                  <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                  <div class="col-md-3">01-Enero-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><strong>Costo Total de Proyecto:</strong></div>
+                                  <div class="col-md-3">$0.00</div>
+                                  <div class="col-md-3"><strong>Fecha de Conclusión:</strong></div>
+                                  <div class="col-md-3">31-Diciembre-2015</div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                  <div class="col-md-3"></div>
+                                  <div class="col-md-3"><strong></strong></div>
+                                  <div class="col-md-3"></div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.box-body -->
+            </div><!-- /.box -->
+      </div><!-- /.col -->
+    </div>
+
+<!-- Hasta aqui todo el contenido nuevo-->
+    </div><!-- .content wrapper -->
+
+    <?php
+      include 'pagina/includes/footer.php';
+      include 'pagina/includes/aside2.php';
+    ?>
+    </div><!-- ./wrapper -->
+    <?php
+      include 'pagina/includes/jsfooter.php';
+    ?>
+  </body>
+</html>

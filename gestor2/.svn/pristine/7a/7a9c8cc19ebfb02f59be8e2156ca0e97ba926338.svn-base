@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?php
+include 'head.php';
+?>
+</head>
+	<!-- Clase para dar borde a la pagina completa
+		<body class="skin-blue layout-boxed sidebar-mini">   -->
+	<body class ="skin-blue">
+		
+
+		<?php
+			include 'header.php';
+			include 'aside.php';
+		?>
+
+<!--</a>
+		<script language="javascript">
+			function fConfig(){    
+		    	/// Invocamos a nuestro script PHP
+		    	$.post("section.php", function(data){
+		    	/// Ponemos la respuesta de nuestro script en el DIV recargado
+		    	$("#recargado").html(data);
+		    	$("#calendar").datepicker();
+				});
+			}
+
+			function fPerfil(){    
+		    	/// Invocamos a nuestro script PHP
+		    	$.post("pages/widgets.html", function(data){
+		    	/// Ponemos la respuesta de nuestro script en el DIV recargado
+		    	$("#recargado").html(data);
+		    	//$("#calendar").datepicker();
+				});
+			}
+
+			function fGraficas(){    
+		    	/// Invocamos a nuestro script PHP
+		    	$.post("Pagina/graficas.php", function(data){
+
+		    	/// Ponemos la respuesta de nuestro script en el DIV recargado
+		    	$("#recargado").html(data);
+				});
+			}
+
+
+		</script>
+-->
+		<!-- Content Wrapper. En esta div se cargara todo el contenido de la pagina -->
+		<div class="content-wrapper">
+
+
+
+		<!-- Add the sidebar's background. This div must be placed
+		immediately after the control sidebar 
+		<div class  ="control-sidebar-bg"></div>-->
+		</div><!-- ./wrapper -->
+
+		<?php
+			include 'footer.php';
+			include 'jsfooter.php';
+		?>
+	</body>
+</html>
