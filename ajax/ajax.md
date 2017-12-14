@@ -1,0 +1,1 @@
+## Aqui van todos los archivos ajax del proyecto.
