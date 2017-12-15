@@ -19,23 +19,33 @@
         public function editar($idtipo_persona, $detalle){
             $sql="UPDATE tipo_persona SET detalle='$detalle'
                     WHERE idtipo_persona='$idtipo_persona'";
+            return ejecutarConsulta($sql);
         }
 
         //Implementamos un metodo para desactivar los tipos de persona
         public function desactivar($idtipo_persona){
             $sql="UPDATE tipo_persona SET status=0 
                     WHERE idtipo_persona='$idtipo_persona'";
+            return ejecutarConsulta($sql);
         }
 
         //Implementamos un metodo para activar los tipos de persona
         public function activar($idtipo_persona){
             $sql="UPDATE tipo_persona SET status=1 
                     WHERE idtipo_persona='$idtipo_persona'";
+            return ejecutarConsulta($sql);
         }
 
         //Implementar un metodo para mostrar los datos
         public function mostrar($idtipo_persona){
+            $sql="SELECT * FROM tipo_persona 
+                    WHERE idtipo_persona='$idtipo_persona'";
+            return ejecutarConsultaSimpleFila($sql);
+        }
 
+        public function listar(){
+            $sql="SELECT * FROM tipo_persona";
+            return ejecutarConsulta($sql);
         }
     }
 ?>
