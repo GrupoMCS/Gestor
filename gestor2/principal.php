@@ -15,7 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <title>AdminLTE 2 | Starter</title>
       <?php
         //include('config.php');
-        include('/pagina/includes/head.php');
+        include('../gestor2/pagina/includes/head.php');
       ?>
   </head>
   <!--
@@ -43,8 +43,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Main Header -->
           <?php 
-          include '/pagina/includes/header.php';
-          include '/pagina/includes/aside.php';
+          include '../gestor2/pagina/includes/header.php';
+          include '../gestor2/pagina/includes/aside.php';
           ?>
 
     <!-- Content Wrapper. En esta div se cargara todo el contenido de la pagina -->
@@ -55,12 +55,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div><!-- ./content-wrapper -->
 
     <?php
-      include '/pagina/includes/footer.php';
-      include '/pagina/includes/aside2.php';
+      include '../gestor2/pagina/includes/footer.php';
+      include '../gestor2/pagina/includes/aside2.php';
     ?>
     </div><!-- ./wrapper -->
     <?php
-      include '/pagina/includes/jsfooter.php';
+      include '../gestor2/pagina/includes/jsfooter.php';
     ?>
   </body>
 </html>

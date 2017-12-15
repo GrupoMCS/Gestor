@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 	<?php
-	include('config.php');
-	include('pagina/includes/head.php');
+	include('../gestor2/config.php');
+	include('../gestor2/pagina/includes/head.php');
 	?>
 	<link href="plugins/modal/modal.css" rel="stylesheet">
 </head>

@@ -46,7 +46,7 @@ function listar(){
             'pdf'
         ],
         "ajax":{
-            url: '../../ajax/tipo_persona.php?op=listar',
+            url: '../../../../ajax/tipo_persona.php?op=listar',
             type: "get",
             dataType: "json",
             error: function(e){

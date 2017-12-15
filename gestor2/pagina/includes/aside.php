@@ -6,7 +6,7 @@
           <div class="user-panel">
             <div class="pull-left image">
               <!-- Imagen del usuario en circulo-->
-              <img src="/gestor/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+              <img src="../gestor2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
               <!-- Nombre de Usuario-->
@@ -17,8 +17,6 @@
           </div>
           <!-- sidebar menu: : el estilo se encuentra en sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="treeview">
-            </li>
             <li class="treeview"><!-- Primer item Inicia ------------------------------------------------------>
               <a href="#">
                 <!-- Clase fa-dashboard contiene el logo para usar en el item del menu seguido del nombre del item

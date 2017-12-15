@@ -96,6 +96,15 @@
 <!-- AdminLTE App -->
 <script src="../public/dist/js/adminlte.min.js"></script>
 
+<!-- DATATABLES -->
+<script src="../public/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="../public/DataTables/Buttons-1.5.0/js/dataTables.buttons.min.js"></script>
+<script src="../public/DataTables/Buttons-1.5.0/js/buttons.html5.min.js"></script>
+<script src="../public/DataTables/Buttons-1.5.0/js/buttons.colVis.min.js"></script>
+<script src="../public/DataTables/JSZip-2.5.0/jszip.min.js"</script>
+<script src="../public/DataTables/pdfmake-0.1.32/pdfmake.min.js"></script>
+<script src="../public/DataTables/pdfmake-0.1.32/vfs_fonts.js"></script>
+
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->

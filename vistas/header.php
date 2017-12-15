@@ -23,6 +23,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!--<link rel="stylesheet" href="../public/dist/css/skins/skin-blue.min.css">-->
   <link rel="stylesheet" href="../public/dist/css/skins/_all-skins.min.css">
 
+  <!-- DATATABLES -->
+  <link rel="stylesheet" type="text/css" href="../public/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="../public/DataTables/Buttons-1.5.0/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="../public/DataTables/Responsive-2.2.1/css/responsive.dataTables.min.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -56,16 +61,16 @@ desired effect
 -->
 <body class="hold-transition skin-blue layout-boxed">
 <div class="wrapper">
-
+  
   <!-- Main Header -->
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>Grupo</b>MCS</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Grupo</b>MCS</span>
     </a>
 
     <!-- Header Navbar -->
@@ -227,54 +232,117 @@ desired effect
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+<aside class="main-sidebar">
 
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="../public/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="../public/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
+      <div class="pull-left info">
+        <p>Alexander Pierce</p>
+        <!-- Status -->
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
 
-      <!-- search form (Optional) -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form>
-      <!-- /.search form -->
+    <!-- search form (Optional) -->
+    <!--<form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+            </button>
+          </span>
+      </div>
+    </form>-->
+    <!-- /.search form -->
 
-      <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header">Menú</li>
+      <!-- Optionally, you can add icons to the links -->
+      <li class="treeview"><!-- Primer item Inicia ------------------------------------------------------>
+        <a href="#">
+          <!-- Clase fa-dashboard contiene el logo para usar en el item del menu seguido del nombre del item
+                Clase fa-angle-left y pull-right son los signos "<" y "V" para el menu desplegado o  -->
+          <i class="fa fa-gears"></i> <span>Panel de Control</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <!-- Submenu -->
+        <ul class="treeview-menu">
+          <li><a href="perfil.php"><i class="fa fa-user"></i>Perfil</a></li>
+          <li><a href="#"><i class="fa fa-desktop"></i>Config. de Escritorio</a></li>
+          <li><a href=""><i class="fa fa-leanpub"></i>Catalogos</a></li>
+        </ul>              
+      </li><!-- Fin de item
+      Repetir item hasta completar menu  -------------------------------------------------------------------------- -->
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-angellist"></i><span>Proyectos</span> <small class="fa fa-angle-left pull-right"></small>
+        </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+          <li><a href="banco_proyectos.php"><i class="fa fa-cloud"></i>Banco de Proyectos</a></li>
+          <li><a href="#"><i class="fa fa-puzzle-piece"></i>Peticiones</a></li>
+          <li><a href="#"><i class="fa fa-exchange"></i>Seguimiento</a></li>
+          <li><a href="#"><i class="fa fa-bank"></i>Recursos</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-list-ul"></i> <span>Tareas</span> <small class="fa fa-angle-left pull-right"></small>
+        </a>
+          <ul class="treeview-menu">
+          <li><a href="tareas_personales.php"><i class="fa fa-hand-o-up"></i>Personales</a></li>
+          <li><a href="tareas_proyectos.php"><i class="fa fa-hand-o-down"></i>Proyectos</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i> <span>Administración</span> <small class="fa fa-angle-left pull-right"></small>
+        </a>
+          <ul class="treeview-menu">
+              <li>
+                  <a href="empleados.php"><i class="fa fa-users"></i>Empleados<i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                      <li><a href="empleados.php"><i class="fa fa-child"></i>Nomina</a></li>
+                      <li><a href="cursos.php"><i class="fa fa-graduation-cap"></i>Capacitación</a></li>
+                      <li>
+                          <a href="#"><i class="fa fa-circle-o"></i>otros<i class="fa fa-angle-left pull-right"></i></a>
+                          <ul class="treeview-menu">
+                              <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                              <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+          <li><a href="#"><i class="fa fa-line-chart"></i>Informes</a></li>
+          <li><a href="#"><i class="fa fa-sitemap"></i>Mapa de Proyecto</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-calendar"></i> <span>Mis Calendarios</span> <small class="fa fa-angle-left pull-right"></small>
+        </a>
+          <ul class="treeview-menu">
+          <li><a href="cal_personal.php"><i class="fa fa-calendar-o"></i>Personales</a></li>
+          <li><a href="#"><i class="fa fa-calendar-o"></i>Proyecto</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-book"></i> <span>Documentación</span> <small class="fa fa-angle-left pull-right"></small>
+        </a>
+          <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-support"></i>Doc. de Soporte</a></li>
+          <li><a href="#"><i class="fa fa-folder"></i>Doc. de Proyecto</a></li>
+          <li><a href="#"><i class="fa fa-file-pdf-o"></i>Formatos de Trabajo</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>
