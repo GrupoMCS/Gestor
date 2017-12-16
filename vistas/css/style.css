@@ -1,0 +1,21 @@
+  .box{
+    border-bottom: 3px solid;
+  }
+  .box.box-primary {
+    border-bottom-color: #3c8dbc;
+  }
+  .box.box-info {
+    border-bottom-color: #00c0ef;
+  }
+  .box.box-danger {
+    border-bottom-color: #dd4b39;
+  }
+  .box.box-warning {
+    border-bottom-color: #f39c12;
+  }
+  .box.box-success {
+    border-bottom-color: #00a65a;
+  }
+  .box.box-default {
+    border-bottom-color: #d2d6de;
+  }

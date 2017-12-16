@@ -1,3 +1,3 @@
 <?php
-	define('__RUTABASE__', basename('../gestor2/'));
+	//define('__RUTABASE__', basename('../gestor2/'));
 ?>

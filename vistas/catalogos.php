@@ -25,50 +25,49 @@
 
         <!-- Form catalogo tipo_persona -->
 		<div class="box box-info">
-            <div class="box-header with-border">
+      <div class="box-header with-border" data-widget="collapse">
 			  <h3 class="box-title">Catalogo de Tipos de Personas</h3>
-			  	<!-- Agregar esto para mostrar minimizar y cerrar el box del form -->
+			  	<!-- Agregar esto para mostrar minimizar y cerrar el box del form: data-widget del div box-header-->
 				<div class="box-tools pull-right">
-					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+					<i class="fa fa-minus pull-right"></i>
 					<!--<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>-->
 				</div>
 			 	 <!--############################-->
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal">
-				<div class="box-body">
-					<div class="panel-body table-responsive" id="listadoregistros">
-						<table id="" class="table table-striped table-bordered table-condensed table-hover">
-							<thead>
-								<th>Opciones</th>
-								<th>Tipo de Persona</th>
-								<th>Status</th>
-							</thead>
-							<tbody>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form class="form-horizontal">
+        <div class="box-body">
+          <div class="panel-body table-responsive" id="listadoregistros">
+            <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
+              <thead>
+                <th>Opciones</th>
+                <th>Tipo de Persona</th>
+                <th>Status</th>
+              </thead>
+              <tbody>
 
-							</tbody>
-							<tfoot>
-								<th>Opciones</th>
-								<th>Tipo de Persona</th>
-								<th>Status</th>
-							</tfoot>
-						</table>
-					</div>
-					<div class="panel-body" id="formularioregistros">
-						Aqui va el form
-
-					</div>					
-				</div>
-				<!-- /.box-body -->
-				<div class="box-footer">
-                <button class="btn btn-success" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
-                <!--<button type="" class="btn btn-info pull-right">Sign in</button>-->
-              </div>
-              <!-- /.box-footer -->
-            </form>
+              </tbody>
+              <tfoot>
+                <th>Opciones</th>
+                <th>Tipo de Persona</th>
+                <th>Status</th>
+              </tfoot>
+            </table>
           </div>
-          <!-- /.box -->
+          <div class="panel-body" id="formularioregistros">
+            Aqui va el form
+
+          </div>					
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            
+        </div>
+        <!-- /.box-footer -->
+        </form>
+      </div>
+        <!-- /.box -->
 
 
 
@@ -78,7 +77,7 @@
 
 
 
-        <!-------------------------->
+      <!-------------------------->
 
     </section>
     <!-- /.content -->

@@ -97,13 +97,10 @@
 <script src="../public/dist/js/adminlte.min.js"></script>
 
 <!-- DATATABLES -->
-<script src="../public/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="../public/DataTables/Buttons-1.5.0/js/dataTables.buttons.min.js"></script>
-<script src="../public/DataTables/Buttons-1.5.0/js/buttons.html5.min.js"></script>
-<script src="../public/DataTables/Buttons-1.5.0/js/buttons.colVis.min.js"></script>
-<script src="../public/DataTables/JSZip-2.5.0/jszip.min.js"</script>
-<script src="../public/DataTables/pdfmake-0.1.32/pdfmake.min.js"></script>
-<script src="../public/DataTables/pdfmake-0.1.32/vfs_fonts.js"></script>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.16/af-2.2.2/b-1.5.0/b-colvis-1.5.0/b-flash-1.5.0/b-html5-1.5.0/b-print-1.5.0/cr-1.4.1/fc-3.2.4/fh-3.1.3/kt-2.3.2/r-2.2.1/rg-1.0.2/rr-1.2.3/sc-1.4.3/sl-1.2.4/datatables.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

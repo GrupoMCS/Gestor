@@ -24,9 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../public/dist/css/skins/_all-skins.min.css">
 
   <!-- DATATABLES -->
-  <link rel="stylesheet" type="text/css" href="../public/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="../public/DataTables/Buttons-1.5.0/css/buttons.dataTables.min.css">
-  <link rel="stylesheet" href="../public/DataTables/Responsive-2.2.1/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.16/af-2.2.2/b-1.5.0/b-colvis-1.5.0/b-flash-1.5.0/b-html5-1.5.0/b-print-1.5.0/cr-1.4.1/fc-3.2.4/fh-3.1.3/kt-2.3.2/r-2.2.1/rg-1.0.2/rr-1.2.3/sc-1.4.3/sl-1.2.4/datatables.min.css"/>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,6 +36,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <!--Estilos personalizados para gestor de proyectos-->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <!--
 BODY TAG OPTIONS:
