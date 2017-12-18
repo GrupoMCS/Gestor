@@ -5,6 +5,9 @@ function init(){
     mostrarform(false);
     listar();
 
+    $("#formulario").on("submit", function(e){
+        guardaryeditar(e);
+    })
 }
 
 //Funcion limpiar
@@ -62,6 +65,28 @@ function listar(){
             "iDisplayLength": "5",//Paginación
             "order": [[ 0, "desc" ]]//Ordenar (columna,orden)
         }).DataTable();
+}
+
+//Funcion para guardaryeditar
+function guardaryeditar(e){
+    e.preventDefault();//No se activara la accion predeterminada del evento
+    $("#btnGuardar").prop("disabled", true);
+    var formData = new FormData($("#formulario")[0]);
+
+    $.ajax({
+        url:"../ajax/tipo_persona.php?op=guardaryeditar",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+
+        success: function(datos){
+            alert(datos);
+            mostrarform(false);
+            tabla.ajax.reload();
+        }
+    });
+    limpiar();
 }
 
 init();
