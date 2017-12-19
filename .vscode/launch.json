@@ -1,20 +1,11 @@
 {
-    // Utilizar IntelliSense para aprender acerca de los posibles atributos.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos 
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "0.1.0",
     "configurations": [
         {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Attach to Chrome",
-            "webRoot": "localhost/gestor"
-        },
-        {
-            "type": "node",
+            "name": "Launch localhost",
+            "type": "php",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "localhost/vistas/scripts/tipo_persona.js"
+            "url": "http://localhost/gestor"
         }
     ]
 }

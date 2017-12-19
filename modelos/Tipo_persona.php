@@ -10,7 +10,7 @@
 
         //Implementamos un metodo para insertar registros
         public function insertar($detalle){
-            $sql="INSERT into tipo_persona (detalle, status)
+            $sql="INSERT into tipo_persona (detalle, estatus)
                     VALUES ('$detalle', 1)"; //status 1=activo 0=inactivo
             return ejecutarConsulta($sql);
         }
@@ -24,14 +24,14 @@
 
         //Implementamos un metodo para desactivar los tipos de persona
         public function desactivar($idtipo_persona){
-            $sql="UPDATE tipo_persona SET status=0 
+            $sql="UPDATE tipo_persona SET estatus=0 
                     WHERE idtipo_persona='$idtipo_persona'";
             return ejecutarConsulta($sql);
         }
 
         //Implementamos un metodo para activar los tipos de persona
         public function activar($idtipo_persona){
-            $sql="UPDATE tipo_persona SET status=1 
+            $sql="UPDATE tipo_persona SET estatus=1 
                     WHERE idtipo_persona='$idtipo_persona'";
             return ejecutarConsulta($sql);
         }

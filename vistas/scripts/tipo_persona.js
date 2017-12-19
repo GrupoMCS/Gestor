@@ -5,7 +5,7 @@ function init(){
     mostrarform(false);
     listar();
 
-    $("#formulario").on("submit", function(e){
+    $("#form.tipo_persona").on("submit", function(e){
         guardaryeditar(e);
     })
 }
@@ -22,7 +22,7 @@ function mostrarform(flag){
     if(flag){
         $("#listadoregistros").hide();
         $("#formularioregistros").show();
-        $("#btnGuardar").prop("disabled", false);
+        $("#btnGuardar").prop("disabled",false);
     }
     else{
         $("#listadoregistros").show();
@@ -44,9 +44,9 @@ function listar(){
             "aServerSide": true,//Paginación y filtrado realizados por el servidor
             dom: 'Bfrtip',//Definimos los elementos del control de tabla
             buttons: [	          
-                'copy',
-                'excel',
-                'csv',
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
                 'pdf'
                 ],
                 "language": {
@@ -62,16 +62,16 @@ function listar(){
                         }
                     },
             "bDestroy": true,
-            "iDisplayLength": "5",//Paginación
+            "iDisplayLength": 5,//Paginación
             "order": [[ 0, "desc" ]]//Ordenar (columna,orden)
         }).DataTable();
 }
 
 //Funcion para guardaryeditar
 function guardaryeditar(e){
-    e.preventDefault();//No se activara la accion predeterminada del evento
-    $("#btnGuardar").prop("disabled", true);
-    var formData = new FormData($("#formulario")[0]);
+    e.preventDefault(); //No se activara la accion predeterminada del evento
+    $("#btnGuardar").prop("disabled",true);
+    var formData = new FormData($("#form.tipo_persona")[0]);
 
     $.ajax({
         url:"../ajax/tipo_persona.php?op=guardaryeditar",

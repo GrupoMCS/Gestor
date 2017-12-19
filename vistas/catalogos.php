@@ -22,7 +22,7 @@
 
         <!--################################-->
       <!--| Todo el contenido de la pagina aqui |-->
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="col-lg-6 col-md-9 col-sm-12 col-xs-12">
           <!-- Form catalogo tipo_persona -->
         <div class="box box-info" > 
         <!-- <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button> -->
@@ -57,18 +57,18 @@
                 </table>
               </div>
               <div class="panel-body" id="formularioregistros">
-                <form method="POST" name="formulario" id="formulario">
+                <form method="POST" name="form.tipo_persona" id="form.tipo_persona">
                   <div class="form-group ">
-                    <label for="">Tipo de persona: </label>
-                    <input type="hidden" name="idtipo_persona" ide="idtipo_persona">
-                    <input type="text" class="form-control" name="Tipo de persona" id="detalle" maxlength="45" placeholder="Tipo de persona" required>
+                    <label>Tipo de persona: </label>
+                    <input type="hidden" name="idtipo_persona" id="idtipo_persona">
+                    <input type="text" class="form-control" name="detalle" id="detalle" maxlength="45" placeholder="Tipo de persona">
                   </div>
-                  <div class="form-group ">
-                    <button type="submit" class="btn btn-primary" id="btnGuardar"><i class="fa fa-save"></i></button>
-                    <button type="button" class="btn btn-danger" onclick="cancelarform()"><i class="fa fa-arrow-circle-left"></i></button>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="btnGuardar"><i class="fa fa-save"></i> Guardar </button>
+                    <button type="button" class="btn btn-danger" onclick="cancelarform()"><i class="fa fa-arrow-circle-left"></i> Cancelar </button>
                   </div>
                 </form>
-              </div>					
+              </div>		
             </div>
             <!-- /.box-body -->
             <div class="box-footer">

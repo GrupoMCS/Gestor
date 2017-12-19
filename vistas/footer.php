@@ -90,6 +90,7 @@
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
+<!--<script src="../public/bower_components/js/jquery-3.1.1.min.js"></script>-->
 <script src="../public/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
