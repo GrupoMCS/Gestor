@@ -10,15 +10,12 @@
 
         case 'guardaryeditar':
             if(empty($idtipo_persona)){
-
-                echo "idtipo_persona esta vacio";
                 $rspta=$tipopersona->insertar($detalle);
-                echo $rspta?"Tipo de persona registrada." : "Tipo de persona no se registró";
+                echo $rspta?"El \"Tipo de persona\" fue registrado." : "El \"Tipo de persona\" no se registró";
             }
             else{
-                echo "idtipo_persona esta lleno";
-                //$rspta=$tipopersona->editar($idtipo_persona,$detalle);
-                //echo $rspta?"Tipo de persona actualizada." : "Tipo de persona no se actualizó";
+                $rspta=$tipopersona->editar($idtipo_persona,$detalle);
+                echo $rspta?"El \"Tipo de persona\" se actualizó." : "El \"Tipo de persona\" no se actualizó";
             }
 
         break;
@@ -46,7 +43,8 @@
 
             while ($reg=$rspta->fetch_object()){
                 $data[]=array(
-                    "0"=>$reg->idtipo_persona,
+                    "0"=>'<button class="btn btn-warning" onclick="mostrar('. $reg->idtipo_persona .')"><i class="fa fa-pencil"></i></button>'.
+                    '<button class="btn btn-danger" onclick="desactivar('. $reg->idtipo_persona .')"><i class="fa fa-close"></i></button>',
                     "1"=>$reg->detalle,
                     "2"=>$reg->estatus
                     );
