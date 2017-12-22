@@ -1,49 +1,49 @@
 <?php
-    require_once "../modelos/Tipo_persona.php";
+    require_once "../modelos/Status_proy.php";
 
-    $tipopersona = new Tipo_persona();
+    $status_proy = new Status_proy();
 
-    $idtipo_persona=isset($_POST["idtipo_persona"])?limpiarCadena($_POST["idtipo_persona"]):"";
+    $idstatus=isset($_POST["idstatus"])?limpiarCadena($_POST["idstatus"]):"";
     $detalle=isset($_POST["detalle"])?limpiarCadena($_POST["detalle"]):"";
     
     switch ($_GET["op"]){
 
         case 'guardaryeditar':
-            if(empty($idtipo_persona)){
-                $rspta=$tipopersona->insertar($detalle);
+            if(empty($idstatus)){
+                $rspta=$status_proy->insertar($detalle);
                 echo $rspta?"El \"Tipo de persona\" fue registrado." : "El \"Tipo de persona\" no se registró";
             }
             else{
-                $rspta=$tipopersona->editar($idtipo_persona,$detalle);
+                $rspta=$status_proy->editar($idstatus,$detalle);
                 echo $rspta?"El \"Tipo de persona\" se actualizó." : "El \"Tipo de persona\" no se actualizó";
             }
 
         break;
 
         case 'desactivar':
-            $rspta=$tipopersona->desactivar($idtipo_persona);
+            $rspta=$status_proy->desactivar($idstatus);
             //echo $rspta ? "Tipo de persona se desactivó" : "Tipo de persona no se desactivó";
         break;
 
         case 'activar':
-            $rspta=$tipopersona->activar($idtipo_persona);
+            $rspta=$status_proy->activar($idstatus);
             //echo $rspta ? "Tipo de persona se activó" : "Tipo de persona no se activó";
         break;
 
         case 'mostrar':
-            $rspta=$tipopersona->mostrar($idtipo_persona);
+            $rspta=$status_proy->mostrar($idstatus);
             //Codificar el resultado utilizando json
             echo json_encode($rspta);
         break;
 
         case 'listar':
-            $rspta=$tipopersona->listar();
+            $rspta=$status_proy->listar();
             //Vamos a declarar un array
             $data= Array();
 
             while ($reg=$rspta->fetch_object()){
                 $data[]=array(
-                    "0"=>($reg->estatus)?'<button class="btn btn-warning" onclick="mostrar('. $reg->idtipo_persona .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivar" class="btn btn-success" onclick="desactivar('. $reg->idtipo_persona .')"><i class="fa fa-eye"></i></button>':'<button class="btn btn-warning" onclick="mostrar('. $reg->idtipo_persona .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivar" class="btn btn-danger" onclick="activar('. $reg->idtipo_persona .')"><i class="fa fa-eye-slash"></i></button>',
+                    "0"=>($reg->estatus)?'<button class="btn btn-warning" onclick="mostrar('. $reg->idstatus .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivar" class="btn btn-success" onclick="desactivar('. $reg->idstatus .')"><i class="fa fa-eye"></i></button>':'<button class="btn btn-warning" onclick="mostrar('. $reg->idstatus .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivar" class="btn btn-danger" onclick="activar('. $reg->idstatus .')"><i class="fa fa-eye-slash"></i></button>',
                     "1"=>$reg->detalle,
                     "2"=>$reg->estatus
                     );

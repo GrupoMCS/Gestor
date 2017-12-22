@@ -14,7 +14,7 @@ function init(){
 //Función limpiar
 function limpiar()
 {
-	$("#idtipo_persona").val("");
+	$("#idstatus").val("");
 	$("#detalle").val("");
 }
 
@@ -64,11 +64,12 @@ function listar()
 		},
 		"ajax":
 				{
-					url: '../ajax/tipo_persona.php?op=listar',
+					url: '../ajax/status_proy.php?op=listar',
 					type : "get",
 					dataType : "json",						
 					error: function(e){
-						console.log(e.responseText);	
+						//console.log(e.responseText);	
+						bootbox.alert(e.responseText);
 					}
 				},
 		"bDestroy": true,
@@ -87,7 +88,7 @@ function guardaryeditar(e)
 	var formData = new FormData($("#formulario")[0]);
 
 	$.ajax({
-		url: "../ajax/tipo_persona.php?op=guardaryeditar",
+		url: "../ajax/status_proy.php?op=guardaryeditar",
 	    type: "POST",
 	    data: formData,
 	    contentType: false,
@@ -104,26 +105,26 @@ function guardaryeditar(e)
 	limpiar();
 }
 
-function mostrar(idtipo_persona)
+function mostrar(idstatus)
 {
-	$.post("../ajax/tipo_persona.php?op=mostrar",{idtipo_persona : idtipo_persona}, function(data, status)
+	$.post("../ajax/status_proy.php?op=mostrar",{idstatus : idstatus}, function(data, status)
 	{
 		data = JSON.parse(data);		
 		mostrarform(true);
 
-		$("#idtipo_persona").val(data.idtipo_persona);
+		$("#idstatus").val(data.idstatus);
 		$("#detalle").val(data.detalle);
 		
  	})
 }
 
 //Función para desactivar registros
-function desactivar(idtipo_persona)
+function desactivar(idstatus)
 {
 	//bootbox.confirm("¿Está Seguro de desactivar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/tipo_persona.php?op=desactivar", {idtipo_persona : idtipo_persona}, function(e){
+        	$.post("../ajax/status_proy.php?op=desactivar", {idstatus : idstatus}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
@@ -132,12 +133,12 @@ function desactivar(idtipo_persona)
 }
 
 //Función para activar registros
-function activar(idtipo_persona)
+function activar(idstatus)
 {
 	//bootbox.confirm("¿Está Seguro de activar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/tipo_persona.php?op=activar", {idtipo_persona : idtipo_persona}, function(e){
+        	$.post("../ajax/status_proy.php?op=activar", {idstatus : idstatus}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	

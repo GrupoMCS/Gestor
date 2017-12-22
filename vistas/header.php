@@ -275,8 +275,8 @@ desired effect
         <!-- Submenu -->
         <ul class="treeview-menu">
           <li><a href="perfil.php"><i class="fa fa-user"></i>Perfil</a></li>
-          <li><a href="#"><i class="fa fa-desktop"></i>Config. de Escritorio</a></li>
-          <li><a href=""><i class="fa fa-leanpub"></i>Catalogos</a></li>
+          <li><a href=""><i class="fa fa-desktop"></i>Config. de Escritorio</a></li>
+          <li><a href="catalogo.php"><i class="fa fa-leanpub"></i>Catalogos</a></li>
         </ul>              
       </li><!-- Fin de item
       Repetir item hasta completar menu  -------------------------------------------------------------------------- -->
