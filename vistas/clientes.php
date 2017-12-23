@@ -8,14 +8,21 @@
 
     <section class="content-header">
       <h1>
-        Inicio del sistema
-        <small>Pagina de inicio de sistema</small>
+        Clientes
+        <small>Clientes del sistema</small>
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><a href=""><i class="fa fa-dashboard"></i> Principal</a></li>
-        <!--<li class="active">Catalogos</li>-->
+        <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i> Principal</a></li>
+        <li class="active">Clientes</li>
       </ol>
     </section>
+
+    <section class="content">
+            <div class="row">
+              
+          </div><!-- /.row -->
+      </section>
+
 
     
   </div>

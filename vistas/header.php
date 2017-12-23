@@ -301,28 +301,31 @@ desired effect
         </ul>
       </li>
       <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i> <span>Administración</span> <small class="fa fa-angle-left pull-right"></small>
-        </a>
+          <a href="#">
+            <i class="fa fa-users"></i> <span>Personas</span> <small class="fa fa-angle-left pull-right"></small>
+          </a>
           <ul class="treeview-menu">
-              <li>
-                  <a href="empleados.php"><i class="fa fa-users"></i>Empleados<i class="fa fa-angle-left pull-right"></i></a>
+            <li><a href="clientes.php"><i class="fa fa-child"></i>Clientes</a></li>
+            <li><a href="empleados.php"><i class="fa fa-user"></i>Empleados</a></li>
+            <li><a href="#"><i class="fa fa-graduation-cap"></i>Capacitaciones</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i>
+                  </a>
                   <ul class="treeview-menu">
-                      <li><a href="empleados.php"><i class="fa fa-child"></i>Nomina</a></li>
-                      <li><a href="cursos.php"><i class="fa fa-graduation-cap"></i>Capacitación</a></li>
-                      <li>
-                          <a href="#"><i class="fa fa-circle-o"></i>otros<i class="fa fa-angle-left pull-right"></i></a>
-                          <ul class="treeview-menu">
-                              <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                              <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                          </ul>
-                      </li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
                   </ul>
-              </li>
-          <li><a href="#"><i class="fa fa-line-chart"></i>Informes</a></li>
-          <li><a href="#"><i class="fa fa-sitemap"></i>Mapa de Proyecto</a></li>
-        </ul>
-      </li>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+          </ul>
+        </li>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-calendar"></i> <span>Mis Calendarios</span> <small class="fa fa-angle-left pull-right"></small>

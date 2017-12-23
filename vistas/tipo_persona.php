@@ -12,8 +12,8 @@
       <small>Catalogos usados en los formularios del Gestor de Proyectos</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="../"><i class="fa fa-dashboard"></i> Principal</a></li>
-      <li class="active"><a href="catalogo.php">Catalogos</a></li>
+      <li><a href="index.php"><i class="fa fa-dashboard"></i> Principal</a></li>
+      <li><a href="catalogo.php">Catalogos</a></li>
       <li class="active">Tipo de Persona</li>
     </ol>
   </section>
