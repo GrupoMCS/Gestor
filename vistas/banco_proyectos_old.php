@@ -18,7 +18,6 @@
     </section>
 
     <section class="content">
-
     <div class="col-md-12"><!-- ./Esta div pertenece a los proyectos activos -->
         <div class="box box-default">
           <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -127,6 +126,8 @@
             </div><!-- /.box-body -->
         </div><!-- /.box -->
     </div><!-- /.col -->
+
+    
     </section>
     
   </div>

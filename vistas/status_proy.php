@@ -14,7 +14,7 @@
     <ol class="breadcrumb">
       <li><a href="index.php"><i class="fa fa-dashboard"></i> Principal</a></li>
       <li class="active"><a href="catalogo.php">Catalogos</a></li>
-      <li class="active">Estado de los proyectos</li>
+      <li class="active">Tipo de estado de los proyectos</li>
     </ol>
   </section>
 
