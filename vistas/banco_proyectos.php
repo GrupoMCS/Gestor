@@ -26,103 +26,13 @@
           </div><!-- /.box-header -->
             <div class="box-body">
                 <div class="content-wraper">
-                    <div class="panel-group" id="proyectos_activos">
-                        <!--inicio de caja para agregar proyecto-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#activos1">
-                                <h4 class="panel-title">
-                                    <a>MCS2015-001: Gestor</a>
-                                    <div class="progress">
-                                        <div class="progress-bar sm progress-bar-striped active" role="progressbar"
-                                             style="width:40%">40%
-                                        </div>
-                                    </div>
-                                </h4>
-                            </div>
-                            <div id="activos1" class="panel-collapse collapse">
-                                <div  class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
-                                        <div class="col-md-3">Gestor de Proyectos</div>
-                                        <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
-                                        <div class="col-md-3">Planeación</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Cliente:</strong></div>
-                                        <div class="col-md-3">Más Más Computers</div>
-                                        <div class="col-md-3"><strong>Entregables:</strong></div>
-                                        <div class="col-md-3">2 de 5</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Responsable:</strong></div>
-                                        <div class="col-md-3">José Martín de Jesús Corrales Pérez</div>
-                                        <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
-                                        <div class="col-md-3">01-Enero-2015</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
-                                        <div class="col-md-3">$10,000.00</div>
-                                        <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
-                                        <div class="col-md-3">Sin Establecer</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-3"><strong></strong></div>
-                                        <div class="col-md-3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="panel-group" id="proyectos_activos"><!--inicio de caja para agregar proyecto-->
+                        
+                        
 
-                        <!-- Fin de caja para agregar proyecto-->
-                        <div class="panel panel-default" >
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#activos2">
-                                <h4 class="panel-title">
-                                    <a>MCS2015-002: Pagina WEB</a>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped active" role="progressbar"
-                                             style="width:60%">60%
-                                        </div>
-                                    </div>
-                                </h4>
-                            </div>
-                            <div id="activos2" class="panel-collapse collapse">
-                                <div  class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
-                                        <div class="col-md-3">Pagina WEB Más Más Computers</div>
-                                        <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
-                                        <div class="col-md-3">Planeación</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Cliente:</strong></div>
-                                        <div class="col-md-3">Más Más Computers</div>
-                                        <div class="col-md-3"><strong>Entregables:</strong></div>
-                                        <div class="col-md-3">2 de 5</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Responsable:</strong></div>
-                                        <div class="col-md-3">Rafael Esparragoza Pérez</div>
-                                        <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
-                                        <div class="col-md-3">01-Enero-2015</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
-                                        <div class="col-md-3">Sin Presupuesto asignado</div>
-                                        <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
-                                        <div class="col-md-3">Sin Establecer</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-3"><strong></strong></div>
-                                        <div class="col-md-3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
+
+                    </div><!-- Fin de caja para agregar proyecto-->
                 </div>
             </div><!-- /.box-body -->
         </div><!-- /.box -->
@@ -137,4 +47,4 @@
 <?php
     require 'footer.php';
 ?>  
-<script type="text/javascript" src="scripts/tipo_persona.js"></script>
+<script type="text/javascript" src="scripts/proyectos.js"></script>
