@@ -46,7 +46,15 @@
 
         public function listar(){
             $sql="SELECT * FROM proyecto";
-            return ejecutarConsulta($sql);
+            $rest= ejecutarConsulta($sql);
+
+           
+
+
+            while ($obj = $rest->fetch_object()) {
+                echo $obj->{0};
+            }
+            return $obj;
         }
     }
 ?>

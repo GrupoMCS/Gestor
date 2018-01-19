@@ -46,21 +46,16 @@ function listar()
         dataType: 'html',
         url: "../ajax/proyectos.php?op=listar",
         success: function(resp){
-			console.log(resp);
-			/*if(define(resp)){
-    			console.log("true");
-			}
-			else{
 				$('#proyectos_activos').html(resp);
-				console.log("false");
-			}*/
-        }
+			}
+        
     });
     /*$.post("../ajax/proyectos.php?op=listar", function(data, status)
 	{
 		console.log(data);
 		data = JSON.parse(data);		
-		$("#proyectos_activos").val(data);
+		//$("#proyectos_activos").val(data);
+		console.log(data);
 		
  	})*/
 }

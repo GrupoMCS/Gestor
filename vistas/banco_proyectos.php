@@ -27,11 +27,11 @@
             <div class="box-body">
                 <div class="content-wraper">
                     <div class="panel-group" id="proyectos_activos"><!--inicio de caja para agregar proyecto-->
-                        
-                        
-
-                        
-
+                          
+                          
+                          
+                          
+                          
                     </div><!-- Fin de caja para agregar proyecto-->
                 </div>
             </div><!-- /.box-body -->
