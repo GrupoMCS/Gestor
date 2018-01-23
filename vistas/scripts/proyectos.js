@@ -1,8 +1,11 @@
-//var tabla;
+var tabla;
 
 //Función que se ejecuta al inicio
 function init(){
-	listar();
+	mostrarform(false);
+	listarActivos();
+
+	
 }
 
 //Función limpiar
@@ -38,26 +41,40 @@ function cancelarform()
 	mostrarform(false);
 }
 
-//Función Listar
-function listar()
+//Función ListarActivos
+function listarActivos()
 {
-	$.ajax({
-        type: "GET",
-        dataType: 'html',
-        url: "../ajax/proyectos.php?op=listar",
-        success: function(resp){
-				$('#proyectos_activos').html(resp);
-			}
-        
-    });
-    /*$.post("../ajax/proyectos.php?op=listar", function(data, status)
-	{
-		console.log(data);
-		data = JSON.parse(data);		
-		//$("#proyectos_activos").val(data);
-		console.log(data);
+	tabla=$('#tblProyActivos').dataTable(
+	{	
+		"aProcessing": true,//Activamos el procesamiento del datatables
+		//"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],//cambia numero de registros para mostrar en la tabla.
+		"aServerSide": true,//Paginación y filtrado realizados por el servidor
+		dom: 'frt',//Definimos los elementos del control de tabla
+		"ordering": false,
+	     buttons: [		          
+		            'copyHtml5',
+		            'excelHtml5',
+		            'csvHtml5',
+					'pdf',
+				], 
+		"language": {
+			"url": "../public/plugins/datatable.lang/spañol.json"
+		},
+		"ajax":
+				{
+					url: '../ajax/proyectos.php?op=listarActivos',
+					type : "get",
+					dataType : "json",						
+					error: function(e){
+						console.log(e.responseText);	
+					}
+				},
+		"bDestroy": true,
+		"lengthChange": true,
+		"iDisplayLength": -1//Paginación
+		//"order": [[ 0, "desc" ]]//Ordenar (columna,orden)
 		
- 	})*/
+	}).DataTable();
 }
 
 //Función para guardar o editar
@@ -78,7 +95,7 @@ function guardaryeditar(e)
 	    {                    
 			  bootbox.alert(datos);	        
 	          mostrarform(false);
-	          //tabla.ajax.reload();
+	          tabla.ajax.reload();
 	    }
 
 	});
@@ -106,7 +123,7 @@ function desactivar(idtipo_persona)
     //    {
         	$.post("../ajax/tipo_persona.php?op=desactivar", {idtipo_persona : idtipo_persona}, function(e){
 				//bootbox.alert(e);
-	            //tabla.ajax.reload();
+	            tabla.ajax.reload();
         	});	
     //    }
 	//});
@@ -120,7 +137,7 @@ function activar(idtipo_persona)
     //    {
         	$.post("../ajax/tipo_persona.php?op=activar", {idtipo_persona : idtipo_persona}, function(e){
 				//bootbox.alert(e);
-	            //tabla.ajax.reload();
+	            tabla.ajax.reload();
         	});	
     //    }
 	//})
