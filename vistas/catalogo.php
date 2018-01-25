@@ -20,7 +20,7 @@
   <section class="content">
     <div class="row">
         <div class="col-lg-6 col-md-9 col-sm-12 col-xs-12">
-            <div class="box box-info">
+            <div class="box box-default">
             <div class="box-header with-border" data-widget="collapse">
                     <h1 class="box-title">Catalogos del Sistema</h1>
             </div>

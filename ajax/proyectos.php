@@ -3,7 +3,7 @@
 
     $proyectos = new Proyectos();
 
-    /*$idproyecto = isset($_POST["idproyecto"])?limpiarCadena($_POST["idproyecto"]):"";
+    $idproyecto = isset($_POST["idproyecto"])?limpiarCadena($_POST["idproyecto"]):"";
     $nombre = isset($_POST["nombre"])?limpiarCadena($_POST["nombre"]):"";
     $idpersona = isset($_POST["idpersona"])?limpiarCadena($_POST["idpersona"]):"";
     $idresponsable = isset($_POST["idresponsable"])?limpiarCadena($_POST["idresponsable"]):"";
@@ -11,17 +11,7 @@
     $fecha_inicio = isset($_POST["fecha_inicio"])?limpiarCadena($_POST["fecha_inicio"]):"";
     $fecha_fin = isset($_POST["fecha_fin"])?limpiarCadena($_POST["fecha_fin"]):"";
     $identregable = isset($_POST["identregable"])?limpiarCadena($_POST["identregable"]):"";
-    $idstatus = isset($_POST["idstatus"])?limpiarCadena($_POST["idstatus"]):"";*/
-
-    $idproyecto = "001";
-    $nombre = "Martin";
-    $idpersona = "25";
-    $idresponsable = "33";
-    $costo = "80000";
-    $fecha_inicio = "2008-02-12";
-    $fecha_fin = "2008-03-12";
-    $identregable = "12";
-    $idstatus = 1;
+    $idstatus = isset($_POST["idstatus"])?limpiarCadena($_POST["idstatus"]):"";
 
 
     
@@ -83,7 +73,65 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3"><strong>Cliente:</strong></div>
-                                <div class="col-md-3">'. $reg->nombre.$reg->apaterno.$reg->amaterno.'</div>
+                                <div class="col-md-3">'. $reg->nombre.' '.$reg->apaterno.' '.$reg->amaterno.'</div>
+                                <div class="col-md-3"><strong>Entregables:</strong></div>
+                                <div class="col-md-3">'. $reg->entregable .'</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><strong>Responsable:</strong></div>
+                                <div class="col-md-3">'. $reg->responsable .'</div>
+                                <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
+                                <div class="col-md-3">'. $reg->fecha_inicio .'</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
+                                <div class="col-md-3">'. $reg->costo .'</div>
+                                <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
+                                <div class="col-md-3">'. $reg->fecha_fin .'</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"><strong></strong></div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>'
+                    );
+                }
+                $results = array(
+                    "sEcho"=>1, //Información para el datatables
+                    "iTotalRecords"=>count($data), //enviamos el total registros al datatable
+                    "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+                    "aaData"=>$data);
+                echo json_encode($results);
+        break;
+
+        case 'listarInactivos':
+            $rspta=$proyectos->listarInactivos();
+            //Vamos a declarar un array
+            $data= Array();
+
+            while ($reg=$rspta->fetch_object()){
+                $data[]=array(
+                    "0"=>'<div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_inactivos" href="#'. $reg->idproyecto .'1">
+                        <h4 class="panel-title">
+                            <a>'.$reg->idproyecto. " - " .$reg->nombreProy.'</a>
+                        </h4>
+                    </div>
+                    <div id="'. $reg->idproyecto .'1" class="panel-collapse collapse">
+                        <div  class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
+                                <div class="col-md-3">'.$reg->nombreProy.'</div>
+                                <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
+                                <div class="col-md-3">'. $reg->etapa .'</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><strong>Cliente:</strong></div>
+                                <div class="col-md-3">'. $reg->nombre.' '.$reg->apaterno.' '.$reg->amaterno.'</div>
                                 <div class="col-md-3"><strong>Entregables:</strong></div>
                                 <div class="col-md-3">'. $reg->entregable .'</div>
                             </div>

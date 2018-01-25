@@ -46,11 +46,11 @@
 
         public function listarActivos(){
             //$sql="SELECT * FROM proyecto";
-            $sql="SELECT proyecto.idproyecto, proyecto.nombre AS nombreProy, personal.nombre, personal.apaterno, 
-                personal.amaterno, status.detalle AS etapa, (SELECT COUNT(identregable) FROM entregable) AS entregable, proyecto.fecha_inicio, proyecto.fecha_fin, 
-                proyecto.costo, (SELECT CONCAT(nombre, apaterno, amaterno) FROM personal
+            $sql='SELECT proyecto.idproyecto, proyecto.nombre AS nombreProy, personal.nombre, personal.apaterno, 
+                personal.amaterno, status.detalle AS etapa, (SELECT COUNT(identregable) FROM entregable) AS entregable, DATE(proyecto.fecha_inicio) AS fecha_inicio, DATE(proyecto.fecha_fin) AS fecha_fin, 
+                proyecto.costo, (SELECT CONCAT(nombre, " ", apaterno, " ", amaterno) FROM personal
                 INNER JOIN persona ON personal.idpersona = persona.idpersona
-                WHERE persona.tipo_persona=2) AS responsable   
+                WHERE persona.tipo_persona=2) AS responsable
                 FROM proyecto
                 INNER JOIN persona ON persona.idpersona = proyecto.idpersona 
                 INNER JOIN personal ON personal.idpersona = persona.idpersona
@@ -58,7 +58,25 @@
                 INNER JOIN status ON proyecto.idstatus = status.idstatus
                 INNER JOIN entregable ON entregable.identregable = proyecto.identregable
                 /*Corregir contador de entregables*/
-            ";
+            ';
+            return ejecutarConsulta($sql);
+        }
+
+        public function listarInactivos(){
+            //$sql="SELECT * FROM proyecto";
+            $sql='SELECT proyecto.idproyecto, proyecto.nombre AS nombreProy, personal.nombre, personal.apaterno, 
+                personal.amaterno, status.detalle AS etapa, (SELECT COUNT(identregable) FROM entregable) AS entregable, DATE(proyecto.fecha_inicio) AS fecha_inicio, DATE(proyecto.fecha_fin) AS fecha_fin, 
+                proyecto.costo, (SELECT CONCAT(nombre, " ", apaterno, " ", amaterno) FROM personal
+                INNER JOIN persona ON personal.idpersona = persona.idpersona
+                WHERE persona.tipo_persona=2) AS responsable
+                FROM proyecto
+                INNER JOIN persona ON persona.idpersona = proyecto.idpersona 
+                INNER JOIN personal ON personal.idpersona = persona.idpersona
+                INNER JOIN tipo_persona ON persona.tipo_persona = tipo_persona.idtipo_persona 
+                INNER JOIN status ON proyecto.idstatus = status.idstatus
+                INNER JOIN entregable ON entregable.identregable = proyecto.identregable
+                /*Corregir contador de entregables*/
+            ';
             return ejecutarConsulta($sql);
         }
     }
