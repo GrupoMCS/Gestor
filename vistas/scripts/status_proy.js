@@ -2,52 +2,52 @@ var tabla;
 
 //Función que se ejecuta al inicio
 function init(){
-	mostrarform(false);
-	listar();
+	mostrarformEProyectos(false);
+	listarEProyectos();
 
-	$("#formulario").on("submit",function(e)
+	$("#formularioEProyectos").on("submit",function(e)
 	{
-		guardaryeditar(e);	
+		guardaryeditarEProyectos(e);	
 	})
 }
 
 //Función limpiar
-function limpiar()
+function limpiarEProyectos()
 {
 	$("#idstatus").val("");
-	$("#detalle").val("");
+	$("#detalleEProyectos").val("");
 }
 
 //Función mostrar formulario
-function mostrarform(flag)
+function mostrarformEProyectos(flag)
 {
-	limpiar();
+	limpiarEProyectos();
 	if (flag)
 	{
-		$("#listadoregistros").hide();
-		$("#formularioregistros").show();
-		$("#btnGuardar").prop("disabled",false);
-		$("#btnagregar").hide();
+		$("#listadoregistrosEProyectos").hide();
+		$("#formularioregistrosEProyectos").show();
+		$("#btnGuardarEProyectos").prop("disabled",false);
+		$("#btnagregarEProyectos").hide();
 	}
 	else
 	{
-		$("#listadoregistros").show();
-		$("#formularioregistros").hide();
-		$("#btnagregar").show();
+		$("#listadoregistrosEProyectos").show();
+		$("#formularioregistrosEProyectos").hide();
+		$("#btnagregarEProyectos").show();
 	}
 }
 
 //Función cancelarform
-function cancelarform()
+function cancelarformEProyectos()
 {
-	limpiar();
-	mostrarform(false);
+	limpiarEProyectos();
+	mostrarformEProyectos(false);
 }
 
 //Función Listar
-function listar()
+function listarEProyectos()
 {
-	tabla=$('#tbllistado').dataTable(
+	tabla=$('#tbllistadoEProyectos').dataTable(
 	{	
 		"aProcessing": true,//Activamos el procesamiento del datatables
 		//"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],//cambia numero de registros para mostrar en la tabla.
@@ -64,12 +64,11 @@ function listar()
 		},
 		"ajax":
 				{
-					url: '../ajax/status_proy.php?op=listar',
+					url: '../ajax/status_proy.php?op=listarEProyectos',
 					type : "get",
 					dataType : "json",						
-					error: function(e){
-						//console.log(e.responseText);	
-						bootbox.alert(e.responseText);
+					error: function(e){	
+						console.alert(e.responseText);
 					}
 				},
 		"bDestroy": true,
@@ -81,14 +80,14 @@ function listar()
 }
 
 //Función para guardar o editar
-function guardaryeditar(e)
+function guardaryeditarEProyectos(e)
 {
 	e.preventDefault(); //No se activará la acción predeterminada del evento
-	$("#btnGuardar").prop("disabled",true);
-	var formData = new FormData($("#formulario")[0]);
+	$("#btnGuardarEProyectos").prop("disabled",true);
+	var formData = new FormData($("#formularioEProyectos")[0]);
 
 	$.ajax({
-		url: "../ajax/status_proy.php?op=guardaryeditar",
+		url: "../ajax/status_proy.php?op=guardaryeditarEProyectos",
 	    type: "POST",
 	    data: formData,
 	    contentType: false,
@@ -97,34 +96,34 @@ function guardaryeditar(e)
 	    success: function(datos)
 	    {                    
 			  bootbox.alert(datos);	        
-	          mostrarform(false);
+	          mostrarformEProyectos(false);
 	          tabla.ajax.reload();
 	    }
 
 	});
-	limpiar();
+	limpiarEProyectos();
 }
 
-function mostrar(idstatus)
+function mostrarEProyectos(idstatus)
 {
-	$.post("../ajax/status_proy.php?op=mostrar",{idstatus : idstatus}, function(data, status)
+	$.post("../ajax/status_proy.php?op=mostrarEProyectos",{idstatus : idstatus}, function(data, status)
 	{
 		data = JSON.parse(data);		
-		mostrarform(true);
+		mostrarformEProyectos(true);
 
 		$("#idstatus").val(data.idstatus);
-		$("#detalle").val(data.detalle);
+		$("#detalleEProyectos").val(data.detalle);
 		
  	})
 }
 
 //Función para desactivar registros
-function desactivar(idstatus)
+function desactivarEProyectos(idstatus)
 {
 	//bootbox.confirm("¿Está Seguro de desactivar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/status_proy.php?op=desactivar", {idstatus : idstatus}, function(e){
+        	$.post("../ajax/status_proy.php?op=desactivarEProyectos", {idstatus : idstatus}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
@@ -133,12 +132,12 @@ function desactivar(idstatus)
 }
 
 //Función para activar registros
-function activar(idstatus)
+function activarEProyectos(idstatus)
 {
 	//bootbox.confirm("¿Está Seguro de activar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/status_proy.php?op=activar", {idstatus : idstatus}, function(e){
+        	$.post("../ajax/status_proy.php?op=activarEProyectos", {idstatus : idstatus}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	

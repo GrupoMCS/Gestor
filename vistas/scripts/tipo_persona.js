@@ -2,52 +2,52 @@ var tabla;
 
 //Función que se ejecuta al inicio
 function init(){
-	mostrarform(false);
-	listar();
+	mostrarformTPersona(false);
+	listarTPersona();
 
-	$("#formulario").on("submit",function(e)
+	$("#formularioTPersona").on("submit",function(e)
 	{
-		guardaryeditar(e);	
+		guardaryeditarTPersona(e);	
 	})
 }
 
 //Función limpiar
-function limpiar()
+function limpiarTPersona()
 {
 	$("#idtipo_persona").val("");
-	$("#detalle").val("");
+	$("#detalleTPersona").val("");
 }
 
 //Función mostrar formulario
-function mostrarform(flag)
+function mostrarformTPersona(flag)
 {
-	limpiar();
+	limpiarTPersona();
 	if (flag)
 	{
-		$("#listadoregistros").hide();
-		$("#formularioregistros").show();
-		$("#btnGuardar").prop("disabled",false);
-		$("#btnagregar").hide();
+		$("#listadoregistrosTPersona").hide();
+		$("#formularioregistrosTPersona").show();
+		$("#btnGuardarTPersona").prop("disabled",false);
+		$("#btnagregarTPersona").hide();
 	}
 	else
 	{
-		$("#listadoregistros").show();
-		$("#formularioregistros").hide();
-		$("#btnagregar").show();
+		$("#listadoregistrosTPersona").show();
+		$("#formularioregistrosTPersona").hide();
+		$("#btnagregarTPersona").show();
 	}
 }
 
 //Función cancelarform
-function cancelarform()
+function cancelarformTPersona()
 {
-	limpiar();
-	mostrarform(false);
+	limpiarTPersona();
+	mostrarformTPersona(false);
 }
 
 //Función Listar
-function listar()
+function listarTPersona()
 {
-	tabla=$('#tbllistado').dataTable(
+	tabla=$('#tbllistadoTPersona').dataTable(
 	{	
 		"aProcessing": true,//Activamos el procesamiento del datatables
 		//"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],//cambia numero de registros para mostrar en la tabla.
@@ -64,7 +64,7 @@ function listar()
 		},
 		"ajax":
 				{
-					url: '../ajax/tipo_persona.php?op=listar',
+					url: '../ajax/tipo_persona.php?op=listarTPersona',
 					type : "get",
 					dataType : "json",						
 					error: function(e){
@@ -80,14 +80,14 @@ function listar()
 }
 
 //Función para guardar o editar
-function guardaryeditar(e)
+function guardaryeditarTPersona(e)
 {
 	e.preventDefault(); //No se activará la acción predeterminada del evento
-	$("#btnGuardar").prop("disabled",true);
-	var formData = new FormData($("#formulario")[0]);
+	$("#btnGuardarTPersona").prop("disabled",true);
+	var formData = new FormData($("#formularioTPersona")[0]);
 
 	$.ajax({
-		url: "../ajax/tipo_persona.php?op=guardaryeditar",
+		url: "../ajax/tipo_persona.php?op=guardaryeditarTPersona",
 	    type: "POST",
 	    data: formData,
 	    contentType: false,
@@ -101,43 +101,45 @@ function guardaryeditar(e)
 	    }
 
 	});
-	limpiar();
+	limpiarTPersona();
 }
 
-function mostrar(idtipo_persona)
+function mostrarTPersona(idtipo_persona)
 {
-	$.post("../ajax/tipo_persona.php?op=mostrar",{idtipo_persona : idtipo_persona}, function(data, status)
+	$.post("../ajax/tipo_persona.php?op=mostrarTPersona",{idtipo_persona : idtipo_persona}, function(data, status)
 	{
 		data = JSON.parse(data);		
-		mostrarform(true);
+		mostrarformTPersona(true);
 
 		$("#idtipo_persona").val(data.idtipo_persona);
-		$("#detalle").val(data.detalle);
+		$("#detalleTPersona").val(data.detalle);
 		
  	})
 }
 
 //Función para desactivar registros
-function desactivar(idtipo_persona)
+function desactivarTPersona(idtipo_persona)
 {
 	//bootbox.confirm("¿Está Seguro de desactivar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/tipo_persona.php?op=desactivar", {idtipo_persona : idtipo_persona}, function(e){
+			$.post("../ajax/tipo_persona.php?op=desactivarTPersona", {idtipo_persona : idtipo_persona}, function(e){
 				//bootbox.alert(e);
-	            tabla.ajax.reload();
-        	});	
+				tabla.ajax.reload();
+			});	
     //    }
 	//});
 }
 
 //Función para activar registros
-function activar(idtipo_persona)
+function activarTPersona(idtipo_persona)
 {
 	//bootbox.confirm("¿Está Seguro de activar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/tipo_persona.php?op=activar", {idtipo_persona : idtipo_persona}, function(e){
+        	
+			
+			$.post("../ajax/tipo_persona.php?op=activarTPersona", {idtipo_persona : idtipo_persona}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
