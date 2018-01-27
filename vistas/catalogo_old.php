@@ -16,7 +16,7 @@
       <li class="active">Catalogos</li>
     </ol>
   </section>
-
+  
   <section class="content">
     <!-- Catalogo tipo de persona-->
     <div class="row container">

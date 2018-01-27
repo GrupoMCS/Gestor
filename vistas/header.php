@@ -302,11 +302,12 @@ desired effect
       </li>
       <li class="treeview">
           <a href="#">
-            <i class="fa fa-users"></i> <span>Personas</span> <small class="fa fa-angle-left pull-right"></small>
+            <i class="fa fa-users"></i> <span>Administracion</span> <small class="fa fa-angle-left pull-right"></small>
           </a>
           <ul class="treeview-menu">
             <li><a href="clientes.php"><i class="fa fa-child"></i>Clientes</a></li>
             <li><a href="empleados.php"><i class="fa fa-user"></i>Empleados</a></li>
+            <li><a href="sucursal.php"><i class="fa fa-building-o"></i>Sucursales</a></li>
             <li><a href="#"><i class="fa fa-graduation-cap"></i>Capacitaciones</a></li>
             <li class="treeview">
               <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i>
