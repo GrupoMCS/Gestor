@@ -19,49 +19,49 @@
   </section>
 
   <section class="content">
-            <div class="row">
-              <div class="col-lg-6 col-md-9 col-sm-12 col-xs-12">
-                  <div class="box box-info">
-                    <div class="box-header with-border" data-widget="collapse">
-                          <h1 class="box-title">Catalogo: Estados de los proyectos <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
-                        <!--<div class="box-tools pull-right">
-                          <i class="fa fa-minus pull-right"></i>
-                        </div>-->
-                    </div>
-                    <!-- /.box-header -->
-                    <!-- centro -->
-                    <div class="panel-body table-responsive" id="listadoregistros">
-                        <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
-                          <thead>
-                            <th>Opciones</th>
-                            <th>Tipos de Estado</th>
-                          </thead>
-                          <tbody>
+    <div class="row container">
+        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+            <div class="box box-default">
+              <div class="box-header with-border" data-widget="collapse">
+                    <h1 class="box-title">Catalogo: Estados de los proyectos <button class="btn btn-success" id="btnagregarEProyectos" onclick="mostrarformEProyectos(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
+                  <!--<div class="box-tools pull-right">
+                    <i class="fa fa-minus pull-right"></i>
+                  </div>-->
+              </div>
+              <!-- /.box-header -->
+              <!-- centro -->
+              <div class="panel-body" id="listadoregistrosEProyectos">
+                  <table id="tbllistadoEProyectos" class="table table-striped table-bordered table-condensed table-hover">
+                    <thead>
+                      <th>Opciones</th>
+                      <th>Tipos de Estado</th>
+                    </thead>
+                    <tbody>
 
-                          </tbody>
-                          <tfoot>
-                            <th>Opciones</th>
-                            <th>Tipos de Estado</th>
-                          </tfoot>
-                        </table>
+                    </tbody>
+                    <tfoot>
+                      <th>Opciones</th>
+                      <th>Tipos de Estado</th>
+                    </tfoot>
+                  </table>
+              </div>
+              <div class="panel-body" id="formularioregistrosEProyectos">
+                  <form name="formularioEProyectos" id="formularioEProyectos" method="POST">
+                    <div class="form-group ">
+                      <label for="">Nombre de tipo de Estado: </label>
+                      <input type="hidden" name="idstatus" id="idstatus">
+                      <input type="text" name="detalleEProyectos" class="form-control" id="detalleEProyectos" maxlength="45" placeholder="Nombre de tipo de estado" required>
                     </div>
-                    <div class="panel-body" id="formularioregistros">
-                        <form name="formulario" id="formulario" method="POST">
-                          <div class="form-group ">
-                            <label for="">Nombre de tipo de Estado: </label>
-                            <input type="hidden" name="idstatus" id="idstatus">
-                            <input type="text" name="detalle" class="form-control" id="detalle" maxlength="45" placeholder="Nombre de tipo de estado" required>
-                          </div>
-                          <div class="form-group" >
-                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                            <button class="btn btn-danger" type="button" onclick="cancelarform()"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
-                          </div>
-                        </form>
+                    <div class="form-group" >
+                      <button class="btn btn-primary" type="submit" id="btnGuardarEProyectos"><i class="fa fa-save"></i> Guardar</button>
+                      <button class="btn btn-danger" type="button" onclick="cancelarformEProyectos()"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                     </div>
-                    <!--Fin centro -->
-              </div><!-- /.col -->
-          </div><!-- /.row -->
-      </section>
+                  </form>
+              </div>
+              <!--Fin centro -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+  </section>
     
   </div>
   <!-- /.content-wrapper -->
