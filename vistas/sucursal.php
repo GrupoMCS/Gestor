@@ -18,7 +18,7 @@
   </section>
 
   <section class="content">
-    <div class="row container">
+    <div class="row">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div class="box box-default">
               <div class="box-header with-border" data-widget="collapse">
@@ -34,7 +34,8 @@
                     <thead>
                       <th>Opciones</th>
                       <th>Sucursal</th>
-                      <th>Estado</th>
+                      <th>Telefono</th>
+                      
                     </thead>
                     <tbody>
 
@@ -42,7 +43,8 @@
                     <tfoot>
                       <th>Opciones</th>
                       <th>Sucursal</th>
-                      <th>Estado</th>
+                      <th>Telefono</th>
+                      
                     </tfoot>
                   </table>
               </div>
@@ -52,10 +54,27 @@
                       <label for="">Nombre de tipo de Estado: </label>
                       <input type="hidden" name="idsucursal" id="idsucursal">
                       <input type="text" name="nombre" class="form-control" id="nombre" maxlength="45" placeholder="Nombre de la sucursal" required>
+                      <label for="">Telefono: </label>
+                      <input type="text" name="telefono" class="form-control" id="telefono" maxlength="10" placeholder="Telefono de contacto">
                     </div>
                     <div class="form-group" >
                       <button class="btn btn-primary" type="submit" id="btnGuardarSucursales"><i class="fa fa-save"></i> Guardar</button>
                       <button class="btn btn-danger" type="button" onclick="cancelarformSucursales()"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    </div>
+                  </form>
+              </div>
+              <div class="panel-body" id="formularioregistrosDirSucursales">
+                  <form name="formularioDirSucursales" id="formularioDirSucursales" method="POST">
+                    <div class="form-group ">
+                      <label for="">Direccion: </label>
+                      <input type="hidden" name="iddireccion" id="iddireccion">
+                      <input type="text" name="calle" class="form-control" id="calle" maxlength="45" placeholder="Calle" required>
+                      <label for="">Numero Exterior: </label>
+                      <input type="text" name="numext" class="form-control" id="numext" maxlength="10" placeholder="Numero Exterior">
+                    </div>
+                    <div class="form-group" >
+                      <button class="btn btn-primary" type="submit" id="btnGuardarDirSucursales"><i class="fa fa-save"></i> Guardar</button>
+                      <button class="btn btn-danger" type="button" onclick="cancelarformDirSucursales()"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                     </div>
                   </form>
               </div>

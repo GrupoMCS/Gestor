@@ -9,16 +9,16 @@
         }
 
         //Implementamos un metodo para insertar registros //falta agregar campos de la insercion de la direccion
-        public function insertarSucursales($detalle){
-            $sql="INSERT into sucursal (iddireccion, nombre, telefono)
-                    VALUES ('$detalle', '1')"; //status 1=activo 0=inactivo
+        public function insertarSucursales($nombre, $telefono){
+            $sql="INSERT into sucursal (iddireccion, nombre, telefono,estado)
+                    VALUES ('1','$nombre', '$telefono', '1')"; //status 1=activo 0=inactivo
             return ejecutarConsulta($sql);
         }
 
         //Implementamos metodo para editar registros
-        public function editarSucursales($idtipo_persona, $detalle){
-            $sql="UPDATE tipo_persona SET detalle='$detalle'
-                    WHERE idtipo_persona='$idtipo_persona'";
+        public function editarSucursales($idsucursal, $nombre, $telefono){
+            $sql="UPDATE sucursal SET nombre='$nombre', telefono='$telefono'
+                    WHERE idsucursal='$idsucursal'";
             return ejecutarConsulta($sql);
         }
 
@@ -40,6 +40,14 @@
         public function mostrarSucursales($idsucursal){
             $sql="SELECT * FROM sucursal 
                     WHERE idsucursal='$idsucursal'";
+            return ejecutarConsultaSimpleFila($sql);
+        }
+
+        //Implementar un metodo para mostrar los datos
+        public function mostrarDirSucursales($iddireccion){
+            $sql="SELECT * FROM direccion 
+                    WHERE iddireccion='$iddireccion'";
+                    
             return ejecutarConsultaSimpleFila($sql);
         }
 

@@ -52,7 +52,7 @@
 
             while ($reg=$rspta->fetch_object()){
                 $data[]=array(
-                    "0"=>'<div class="panel panel-default">
+                    "0"=>'<div class="panel panel-default ">
                     <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#'. $reg->idproyecto .'">
                         <h4 class="panel-title">
                             <a>'.$reg->idproyecto. " - " .$reg->nombreProy.'</a>

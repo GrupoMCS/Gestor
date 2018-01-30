@@ -18,46 +18,47 @@
     </section>
 
     <section class="content">
-
-    <div class="col-lg-6 col-md-9 col-sm-12 col-xs-12"><!-- ./Esta div pertenece a los proyectos activos -->
-        <div class="box box-default">
-          <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
-            <h3 class="box-title">Proyectos Activos</h3>
-          </div><!-- /.box-header -->
-            <div class="box-body">
-                <div class="content-wraper">
-                    <div class="panel-group" id="proyectos_activos"><!--inicio de caja para agregar proyecto-->
-                      <table id="tblProyActivos" class="table table-striped table-bordered table-condensed">
-                          <thead>
-                            <th></th>
-                            
-                          </thead>
-                        </table>
-                    </div><!-- Fin de caja para agregar proyecto-->
-                </div>
-            </div><!-- /.box-body -->
-        </div><!-- /.box -->
-    </div><!-- /.col -->
-
-    <div class="col-lg-6 col-md-9 col-sm-12 col-xs-12"><!-- ./Esta div pertenece a los proyectos inactivos -->
-        <div class="box box-default">
-          <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
-            <h3 class="box-title">Proyectos Concluidos</h3>
-          </div><!-- /.box-header -->
-            <div class="box-body">
-                <div class="content-wraper">
-                    <div class="panel-group" id="proyectos_inactivos"><!--inicio de caja para agregar proyecto-->
-                      <table id="tblProyInactivos" class="table table-striped table-bordered table-condensed">
-                          <thead>
-                            <th></th>
-                            
-                          </thead>
-                        </table>
-                    </div><!-- Fin de caja para agregar proyecto-->
-                </div>
-            </div><!-- /.box-body -->
-        </div><!-- /.box -->
-    </div><!-- /.col -->
+    <div class="row justifi-content-center"> 
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><!-- ./Esta div pertenece a los proyectos activos -->
+          <div class="box box-default">
+            <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
+              <h3 class="box-title">Proyectos Activos</h3>
+            </div><!-- /.box-header -->
+              <div class="box-body">
+                  <div class="content-wraper">
+                      <div class="panel-group" id="proyectos_activos"><!--inicio de caja para agregar proyecto-->
+                        <table id="tblProyActivos" class="table table-striped table-bordered table-condensed">
+                            <thead>
+                              <th></th>
+                              
+                            </thead>
+                          </table>
+                      </div><!-- Fin de caja para agregar proyecto-->
+                  </div>
+              </div><!-- /.box-body -->
+          </div><!-- /.box -->
+      </div><!-- /.col -->
+    
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><!-- ./Esta div pertenece a los proyectos inactivos -->
+          <div class="box box-default">
+            <div class="box-header with-border" data-widget="collapse"><i class="fa fa-minus"></i>
+              <h3 class="box-title">Proyectos Concluidos</h3>
+            </div><!-- /.box-header -->
+              <div class="box-body">
+                  <div class="content-wraper">
+                      <div class="panel-group" id="proyectos_inactivos"><!--inicio de caja para agregar proyecto-->
+                        <table id="tblProyInactivos" class="table table-striped table-bordered table-condensed">
+                            <thead>
+                              <th></th>
+                              
+                            </thead>
+                          </table>
+                      </div><!-- Fin de caja para agregar proyecto-->
+                  </div>
+              </div><!-- /.box-body -->
+          </div><!-- /.box -->
+      </div><!-- /.col -->
+    </div> 
     </section>
     
   </div>

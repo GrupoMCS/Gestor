@@ -3,6 +3,7 @@ var tabla;
 //Función que se ejecuta al inicio
 function init(){
 	mostrarformSucursales(false);
+	mostrarformDirSucursales(false);
 	listarSucursales();
 
 	$("#formularioSucursales").on("submit",function(e)
@@ -16,6 +17,7 @@ function limpiarSucursales()
 {
 	$("#idsucursal").val("");
 	$("#nombre").val("");
+	$("#telefono").val("");
 }
 
 //Función mostrar formulario
@@ -44,6 +46,39 @@ function cancelarformSucursales()
 	mostrarformSucursales(false);
 }
 
+//Función limpiar
+function limpiarDirSucursales()
+{
+	$("#idsucursal").val("");
+	$("#nombre").val("");
+	$("#telefono").val("");
+}
+
+function mostrarformDirSucursales(flag, iddireccion)
+{
+	limpiarSucursales();
+	if (flag)
+	{
+		$("#listadoregistrosSucursales").hide();
+		$("#formularioregistrosDirSucursales").show();
+		$("#btnGuardarSucursales").prop("disabled",false);
+		$("#btnagregarSucursales").hide();
+	}
+	else
+	{
+		$("#listadoregistrosSucursales").show();
+		$("#formularioregistrosDirSucursales").hide();
+		$("#btnagregarSucursales").show();
+	}
+}
+
+//Función cancelarform
+function cancelarformDirSucursales()
+{
+	limpiarDirSucursales();
+	mostrarformDirSucursales(false);
+}
+
 //Función Listar
 function listarSucursales()
 {
@@ -52,19 +87,22 @@ function listarSucursales()
 		"aProcessing": true,//Activamos el procesamiento del datatables
 		//"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],//cambia numero de registros para mostrar en la tabla.
 		"aServerSide": true,//Paginación y filtrado realizados por el servidor
-	    dom: 'Bfrtip',//Definimos los elementos del control de tabla
+	    dom: 'frtip',//Definimos los elementos del control de tabla
 	     buttons: [		          
 		            'copyHtml5',
 		            'excelHtml5',
 		            'csvHtml5',
 					'pdf',
 				], 
+		"columnDefs": [
+					{ "width": "20%", "targets": 0 }
+				  ],
 		"language": {
 			"url": "../public/plugins/datatable.lang/spañol.json"
 		},
 		"ajax":
 				{
-					url: '../ajax/status_proy.php?op=listarSucursales',
+					url: '../ajax/sucursal.php?op=listarSucursales',
 					type : "get",
 					dataType : "json",						
 					error: function(e){	
@@ -87,7 +125,7 @@ function guardaryeditarSucursales(e)
 	var formData = new FormData($("#formularioSucursales")[0]);
 
 	$.ajax({
-		url: "../ajax/status_proy.php?op=guardaryeditarSucursales",
+		url: "../ajax/sucursal.php?op=guardaryeditarSucursales",
 	    type: "POST",
 	    data: formData,
 	    contentType: false,
@@ -104,26 +142,40 @@ function guardaryeditarSucursales(e)
 	limpiarSucursales();
 }
 
-function mostrarSucursales(idsucursales)
+function mostrarSucursales(idsucursal)
 {
-	$.post("../ajax/status_proy.php?op=mostrarSucursales",{idsucursal : idsucursal}, function(data, status)
+	$.post("../ajax/sucursal.php?op=mostrarSucursales",{idsucursal : idsucursal}, function(data, status)
 	{
 		data = JSON.parse(data);		
 		mostrarformSucursales(true);
 
-		$("#idsucursal").val(data.idsucursales);
-		$("#nombre").val(data.idsucursales);
-		
+		$("#idsucursal").val(data.idsucursal);
+		$("#nombre").val(data.nombre);
+		$("#telefono").val(data.telefono);
+ 	})
+}
+
+function mostrarDirSucursales(iddireccion)
+{	console.log(iddireccion);
+	$.post("../ajax/sucursal.php?op=mostrarDirSucursales",{iddireccion : iddireccion}, function(data, status)
+	{
+		data = JSON.parse(data);	
+			
+		mostrarformDirSucursales(true);
+
+		$("#calle").val(data.calle);
+		$("#numext").val(data.numext);
+		$("#colonia").val(data.colonia);
  	})
 }
 
 //Función para desactivar registros
-function desactivarSucursales(idsucursales)
+function desactivarSucursales(idsucursal)
 {
 	//bootbox.confirm("¿Está Seguro de desactivar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/status_proy.php?op=desactivarSucursales", {idsucursales : idsucursales}, function(e){
+        	$.post("../ajax/sucursal.php?op=desactivarSucursales", {idsucursal : idsucursal}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
@@ -132,12 +184,12 @@ function desactivarSucursales(idsucursales)
 }
 
 //Función para activar registros
-function activarSucursales(idsucursales)
+function activarSucursales(idsucursal)
 {
 	//bootbox.confirm("¿Está Seguro de activar el \"Tipo de persona\"?", function(result){
 	//	if(result)
     //    {
-        	$.post("../ajax/status_proy.php?op=activarSucursales", {idsucursales : idsucursales}, function(e){
+        	$.post("../ajax/sucursal.php?op=activarSucursales", {idsucursal : idsucursal}, function(e){
 				//bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
