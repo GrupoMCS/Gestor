@@ -22,3 +22,139 @@
   div.row{
     border-bottom: solid 0.2px #d2d6de ;
   }
+
+
+  /**********************************************************************************\
+            Este estolo pertenece a "bootstrap-tockenfield.css"   #3c8dbc
+\**********************************************************************************/
+
+.ui-menu .ui-menu-item {
+  width: auto;
+  padding: 6px;
+}
+
+.tokenfield .focus{
+  border-radius: 50%;
+}
+
+.tokenfield .token {
+  background-color: #3c8dbc;
+  border-radius: 0px;
+}
+
+.tokenfield .token-input {
+  width: 2px;
+}
+
+.tokenfield .token .close {
+  float: left;
+}
+
+.tokenfield.form-control{
+  width: 10px;
+}
+
+.tokenfield .token .token-label{
+  color: white;
+  background-color: #3c8dbc;
+}
+
+/*********************************************************************\
+          Este estolo pertenece a "jQueryUI.css"
+\*********************************************************************/
+
+.ui-widget-content {
+  width: 275px;
+  padding: 0;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 0;
+  background: #5897fb;
+  padding: 6px;
+  color: white;
+}
+
+/*********************************************************************\
+          Este estolo pertenece a "select2.min.css"
+\*********************************************************************/
+
+.select2-container .select2-selection--multiple {
+  display: table;
+  border-radius: 0;
+  border: solid #d2d6de 1px;
+}
+
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-radius: 0px;
+  border-color: #3c8dbc;
+}
+
+/*********************************************************************\
+          Este estolo pertenece a "botones en perfil"
+\*********************************************************************/
+
+.btn-default{
+  background-color:transparent;
+}
+
+
+legend.scheduler-border {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+/*********************************************************************\
+          Este estolo pertenece a "Tabs en agregar usuario"
+\*********************************************************************/
+
+.nav-tabs-custom>.nav-tabs>li {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  min-width: 80px;
+  padding: 0px;
+}
+
+.nav-tabs-custom>.nav-tabs>li>a {
+  padding: 5px;
+  text-align: center;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active {
+  border-left-color: #00a7d0;
+  border-right-color: #00a7d0;
+}
+
+.tab-content > .active {
+  border: 1px solid;
+  border-color: #ddd;
+  padding: 10px;
+}
+.nav-tabs-custom>.tab-content {
+  border-top: 0.5px solid;
+  border-top-color: #ddd;
+}
+
+.nav-tabs-custom>.nav-tabs>li>a:hover {
+  color: #3c8dbc;
+}
+
+/*********************************************************************\
+          Este estolo pertenece a "text area, para agregar scroll"
+\*********************************************************************/
+
+textarea {
+  overflow-y: scroll;
+  /*  resize: none; Agregar esto para que no se pueda redimensionar el textarea */
+}
+
+td{
+  width: auto;
+}

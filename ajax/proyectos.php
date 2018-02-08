@@ -50,62 +50,16 @@
             //Vamos a declarar un array
             $data= Array();
 
-            while ($reg=$rspta->fetch_object()){
-                $data[]=array(
-                    "0"=>'<div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_activos" href="#'. $reg->idproyecto .'">
-                        <h4 class="panel-title">
-                            <a>'.$reg->idproyecto. " - " .$reg->nombreProy.'</a>
-                            <div class="progress">
-                                <div class="progress-bar sm progress-bar-striped active" role="progressbar"
-                                     style="width:40%">40%
-                                </div>
-                            </div>
-                        </h4>
-                    </div>
-                    <div id="'. $reg->idproyecto .'" class="panel-collapse collapse">
-                        <div  class="panel-body">
-                            <div class="row">
-                                <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
-                                <div class="col-md-3">'.$reg->nombreProy.'</div>
-                                <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
-                                <div class="col-md-3">'. $reg->etapa .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Cliente:</strong></div>
-                                <div class="col-md-3">'. $reg->nombre.' '.$reg->apaterno.' '.$reg->amaterno.'</div>
-                                <div class="col-md-3"><strong>Entregables:</strong></div>
-                                <div class="col-md-3">'. $reg->entregable .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Responsable:</strong></div>
-                                <div class="col-md-3">'. $reg->responsable .'</div>
-                                <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
-                                <div class="col-md-3">'. $reg->fecha_inicio .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
-                                <div class="col-md-3">'. $reg->costo .'</div>
-                                <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
-                                <div class="col-md-3">'. $reg->fecha_fin .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
-                                <div class="col-md-3"></div>
-                                <div class="col-md-3"><strong></strong></div>
-                                <div class="col-md-3"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>'
-                    );
-                }
-                $results = array(
-                    "sEcho"=>1, //Información para el datatables
-                    "iTotalRecords"=>count($data), //enviamos el total registros al datatable
-                    "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
-                    "aaData"=>$data);
-                echo json_encode($results);
+            $rowdata=array();
+            $i=0;
+                    while ($row = $rspta->fetch_array())
+                    {
+                        $rowdata[$i]=$row;
+                        $i++;           
+                    }
+
+                
+                echo json_encode($rowdata);
         break;
 
         case 'listarInactivos':
@@ -121,66 +75,6 @@
                         $i++;           
                     }
             echo json_encode($rowdata);
-
-
-            //echo json_encode($rspta);
-            //echo $rspta;
-            /*
-            //Vamos a declarar un array
-            $data= Array();
-
-            while ($reg=$rspta->fetch_object()){
-                $data[]=array(
-                    "0"=>'<div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#proyectos_inactivos" href="#'. $reg->idproyecto .'1">
-                        <h4 class="panel-title">
-                            <a>'.$reg->idproyecto. " - " .$reg->nombreProy.'</a>
-                        </h4>
-                    </div>
-                    <div id="'. $reg->idproyecto .'1" class="panel-collapse collapse">
-                        <div  class="panel-body">
-                            <div class="row">
-                                <div class="col-md-3"><strong>Nombre Proyecto:</strong></div>
-                                <div class="col-md-3">'.$reg->nombreProy.'</div>
-                                <div class="col-md-3"><strong>Fase del Proyecto:</strong></div>
-                                <div class="col-md-3">'. $reg->etapa .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Cliente:</strong></div>
-                                <div class="col-md-3">'. $reg->nombre.' '.$reg->apaterno.' '.$reg->amaterno.'</div>
-                                <div class="col-md-3"><strong>Entregables:</strong></div>
-                                <div class="col-md-3">'. $reg->entregable .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Responsable:</strong></div>
-                                <div class="col-md-3">'. $reg->responsable .'</div>
-                                <div class="col-md-3"><strong>Fecha de Inicio del Proyecto:</strong></div>
-                                <div class="col-md-3">'. $reg->fecha_inicio .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Costo Presupuestado:</strong></div>
-                                <div class="col-md-3">'. $reg->costo .'</div>
-                                <div class="col-md-3"><strong>Fecha Limite de Entrega:</strong></div>
-                                <div class="col-md-3">'. $reg->fecha_fin .'</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><a href="#">Ver Más Detalles...</a></div>
-                                <div class="col-md-3"></div>
-                                <div class="col-md-3"><strong></strong></div>
-                                <div class="col-md-3"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>'
-                    );
-                }
-                $results = array(
-                    "sEcho"=>1, //Información para el datatables
-                    "iTotalRecords"=>count($data), //enviamos el total registros al datatable
-                    "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
-                    "aaData"=>$data);
-                echo json_encode($results);
-                */
         break;
     }
 ?>
