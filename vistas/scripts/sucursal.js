@@ -3,13 +3,14 @@ var tabla;
 //Función que se ejecuta al inicio
 function init(){
 	mostrarformSucursales(false);
-	mostrarformDirSucursales(false);
+	
 	listarSucursales();
 
 	$("#formularioSucursales").on("submit",function(e)
 	{
 		guardaryeditarSucursales(e);	
 	})
+	
 }
 
 //Función limpiar
@@ -44,39 +45,6 @@ function cancelarformSucursales()
 {
 	limpiarSucursales();
 	mostrarformSucursales(false);
-}
-
-//Función limpiar
-function limpiarDirSucursales()
-{
-	$("#idsucursal").val("");
-	$("#nombre").val("");
-	$("#telefono").val("");
-}
-
-function mostrarformDirSucursales(flag, iddireccion)
-{
-	limpiarSucursales();
-	if (flag)
-	{
-		$("#listadoregistrosSucursales").hide();
-		$("#formularioregistrosDirSucursales").show();
-		$("#btnGuardarSucursales").prop("disabled",false);
-		$("#btnagregarSucursales").hide();
-	}
-	else
-	{
-		$("#listadoregistrosSucursales").show();
-		$("#formularioregistrosDirSucursales").hide();
-		$("#btnagregarSucursales").show();
-	}
-}
-
-//Función cancelarform
-function cancelarformDirSucursales()
-{
-	limpiarDirSucursales();
-	mostrarformDirSucursales(false);
 }
 
 //Función Listar
@@ -152,20 +120,6 @@ function mostrarSucursales(idsucursal)
 		$("#idsucursal").val(data.idsucursal);
 		$("#nombre").val(data.nombre);
 		$("#telefono").val(data.telefono);
- 	})
-}
-
-function mostrarDirSucursales(iddireccion)
-{	console.log(iddireccion);
-	$.post("../ajax/sucursal.php?op=mostrarDirSucursales",{iddireccion : iddireccion}, function(data, status)
-	{
-		data = JSON.parse(data);	
-			
-		mostrarformDirSucursales(true);
-
-		$("#calle").val(data.calle);
-		$("#numext").val(data.numext);
-		$("#colonia").val(data.colonia);
  	})
 }
 

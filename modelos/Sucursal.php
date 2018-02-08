@@ -43,14 +43,6 @@
             return ejecutarConsultaSimpleFila($sql);
         }
 
-        //Implementar un metodo para mostrar los datos
-        public function mostrarDirSucursales($iddireccion){
-            $sql="SELECT * FROM direccion 
-                    WHERE iddireccion='$iddireccion'";
-                    
-            return ejecutarConsultaSimpleFila($sql);
-        }
-
         public function listarSucursales(){
             $sql="SELECT * FROM sucursal";
             return ejecutarConsulta($sql);

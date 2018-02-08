@@ -40,12 +40,7 @@
             echo json_encode($rspta);
         break;
 
-        case 'mostrarDirSucursales':
-            $rspta=$sucursales->mostrarDirSucursales($iddireccion);
-            //Codificar el resultado utilizando json
-            echo $rspta;
-            //echo json_encode($rspta);
-        break;
+    
 
         case 'listarSucursales':
             $rspta=$sucursales->listarSucursales();
@@ -55,9 +50,9 @@
 
             while ($reg=$rspta->fetch_object()){
                 $data[]=array(
-                    "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrarSucursales('. $reg->idsucursal .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivarSucursales" class="btn btn-success" onclick="desactivarSucursales('. $reg->idsucursal .')"><i class="fa fa-eye"></i></button>'." ".'<button class="btn btn-info" onclick="mostrarDirSucursales('. $reg->iddireccion .')"><i class="fa fa-map-marker"> </i></button>'
+                    "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrarSucursales('. $reg->idsucursal .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivarSucursales" class="btn btn-success" onclick="desactivarSucursales('. $reg->idsucursal .')"><i class="fa fa-eye"></i></button>'
                     :
-                    '<button class="btn btn-warning" onclick="mostrarSucursales('. $reg->idsucursal .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivarSucursales" class="btn btn-danger" onclick="activarSucursales('. $reg->idsucursal .')"><i class="fa fa-eye-slash"></i></button>'." ".'<button class="btn btn-info" onclick="mostrarDirSucursales('. $reg->iddireccion .')"><i class="fa fa-map-marker"></i></button>',
+                    '<button class="btn btn-warning" onclick="mostrarSucursales('. $reg->idsucursal .')"><i class="fa fa-pencil"></i></button>' . " " . '<button id="btnActivarSucursales" class="btn btn-danger" onclick="activarSucursales('. $reg->idsucursal .')"><i class="fa fa-eye-slash"></i></button>',
                     "1"=>$reg->nombre,
                     "2"=>$reg->telefono
                     );

@@ -110,6 +110,22 @@
 
         case 'listarInactivos':
             $rspta=$proyectos->listarInactivos();
+
+            //$result = $con->query($sql);
+
+            $rowdata=array();
+            $i=0;
+                    while ($row = $rspta->fetch_array())
+                    {
+                        $rowdata[$i]=$row;
+                        $i++;           
+                    }
+            echo json_encode($rowdata);
+
+
+            //echo json_encode($rspta);
+            //echo $rspta;
+            /*
             //Vamos a declarar un array
             $data= Array();
 
@@ -164,6 +180,7 @@
                     "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
                     "aaData"=>$data);
                 echo json_encode($results);
+                */
         break;
     }
 ?>
