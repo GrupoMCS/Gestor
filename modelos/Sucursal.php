@@ -47,5 +47,12 @@
             $sql="SELECT * FROM sucursal";
             return ejecutarConsulta($sql);
         }
+
+        //Implementamos un metodo para insertar la direccion de las sucursales
+        public function insertarDirSucursal($nombre, $telefono, $calle, $numint, $numext, $colonia, $cp, $pais, $estado, $municipio){
+            $sql="INSERT into sucursal ('ejecutarConsulta_retornarID($sql)', nombre, telefono,estado)
+                    VALUES ('1','$nombre', '$telefono', '1')"; //status 1=activo 0=inactivo
+            return ;
+        }
     }
 ?>

@@ -118,40 +118,6 @@ function listarActivos()
 		
 }
 
-/*{
-	tabla=$('#tblProyActivos').dataTable(
-	{	
-		"aProcessing": true,//Activamos el procesamiento del datatables
-		//"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],//cambia numero de registros para mostrar en la tabla.
-		"aServerSide": true,//Paginación y filtrado realizados por el servidor
-		dom: 'frt',//Definimos los elementos del control de tabla
-		"ordering": false,
-	     buttons: [		          
-		            'copyHtml5',
-		            'excelHtml5',
-		            'csvHtml5',
-					'pdf',
-				], 
-		"language": {
-			"url": "../public/plugins/datatable.lang/spañol.json"
-		},
-		"ajax":
-				{
-					url: '../ajax/proyectos.php?op=listarActivos',
-					type : "get",
-					dataType : "json",						
-					error: function(e){
-						console.log(e.responseText);	
-					}
-				},
-		"bDestroy": true,
-		"lengthChange": true,
-		"iDisplayLength": -1//Paginación
-		//"order": [[ 0, "desc" ]]//Ordenar (columna,orden)
-		
-	}).DataTable();
-}*/
-
 //Función ListarActivos
 function listarInactivos()
 {

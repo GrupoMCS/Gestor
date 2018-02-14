@@ -5,9 +5,17 @@
 
     $idsucursal=isset($_POST["idsucursal"])?limpiarCadena($_POST["idsucursal"]):"";
     $nombre=isset($_POST["nombre"])?limpiarCadena($_POST["nombre"]):"";
-    $estado=isset($_POST["estado"])?limpiarCadena($_POST["estado"]):"";
     $telefono=isset($_POST["telefono"])?limpiarCadena($_POST["telefono"]):"";
     $iddireccion=isset($_POST["iddireccion"])?limpiarCadena($_POST["iddireccion"]):"";
+    $colonia=isset($_POST["colonia"])?limpiarCadena($_POST["colonia"]):"";
+    $telefono=isset($_POST["telefono"])?limpiarCadena($_POST["telefono"]):"";
+    $calle=isset($_POST["calle"])?limpiarCadena($_POST["calle"]):"";
+    $numint=isset($_POST["numint"])?limpiarCadena($_POST["numint"]):"";
+    $cp=isset($_POST["cp"])?limpiarCadena($_POST["cp"]):"";
+    $numext=isset($_POST["numext"])?limpiarCadena($_POST["numext"]):"";
+    $pais=isset($_POST["pais"])?limpiarCadena($_POST["pais"]):"";
+    $estado=isset($_POST["estado"])?limpiarCadena($_POST["estado"]):"";
+    $municipio=isset($_POST["municipio"])?limpiarCadena($_POST["municipio"]):"";
     
     switch ($_GET["op"]){
 

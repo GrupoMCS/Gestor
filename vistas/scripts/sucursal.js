@@ -8,6 +8,7 @@ function init(){
 
 	$("#formularioSucursales").on("submit",function(e)
 	{
+		//console.log(e);
 		guardaryeditarSucursales(e);	
 	})
 	
