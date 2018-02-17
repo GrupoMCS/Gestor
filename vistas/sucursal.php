@@ -55,6 +55,7 @@
                         <div class="col-lg-12 col-smd-12 col-sm-12 col-xs-12">
                           <label for="nombre">Nombre de la sucursal: </label>
                           <input type="hidden" name="idsucursal" id="idsucursal" >
+                          <input type="hidden" name="iddireccion" id="iddireccion" >
                           <input type="text" name="nombre" class="form-control" id="nombre" maxlength="45" placeholder="Nombre de la sucursal" tabindex="1" required>
                         </div>
                       </div>
@@ -73,13 +74,13 @@
                           <label for="calle">Calle: </label>
                           <input type="text" name="calle" class="form-control" id="calle" maxlength="45" placeholder="Nombre de la calle" tabindex="4">
                         </div> 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <label for="numint">Num. Int.:</label>
-                          <input type="text" name="numint" class="form-control" id="numint" maxlength="3" placeholder="Numero Interior" tabindex="5">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <label for="numint">Numero Interior:</label>
+                          <input type="text" name="numint" class="form-control" id="numint" maxlength="6" placeholder="Numero Interior" tabindex="5">
                         </div> 
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                          <label for="numext">Num. Ext.: </label>
-                          <input type="text" name="numext" class="form-control" id="numext" maxlength="3" placeholder="Numero Exterior" tabindex="6">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                          <label for="numext">Numero Exterior: </label>
+                          <input type="text" name="numext" class="form-control" id="numext" maxlength="6" placeholder="Numero Exterior" tabindex="6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                           <label for="cp">C.P.: </label>

@@ -21,15 +21,16 @@
 
         case 'guardaryeditarSucursales':
             if(empty($idsucursal)){
-                $rspta=$sucursales->insertarSucursales($nombre, $telefono);
-                
+                $rspta=$sucursales->insertarDirSucursales($nombre, $telefono, $calle, $numint, $numext, $colonia, $cp, $pais, $estado, $municipio);
+
                 echo $rspta?"La sucursal se registro correctamente." : "La sucursal no se registró";
             }
             else{
-                $rspta=$sucursales->editarSucursales($idsucursal,$nombre, $telefono);
+                $rspta=$sucursales->editarSucursales($idsucursal, $iddireccion, $nombre, $telefono, $calle, $numint, $numext, $colonia, $cp, $pais, $estado, $municipio);
+                
+                //echo $rspta;
                 echo $rspta?"La sucursal se actualizó." : "La sucursal no se actualizó";
             }
-
         break;
 
         case 'desactivarSucursales':
@@ -47,8 +48,6 @@
             //Codificar el resultado utilizando json
             echo json_encode($rspta);
         break;
-
-    
 
         case 'listarSucursales':
             $rspta=$sucursales->listarSucursales();

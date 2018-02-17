@@ -20,6 +20,14 @@ function limpiarSucursales()
 	$("#idsucursal").val("");
 	$("#nombre").val("");
 	$("#telefono").val("");
+	$("#colonia").val("");
+	$("#calle").val("");
+	$("#numint").val("");
+	$("#numext").val("");
+	$("#cp").val("");
+	$("#pais").val("");
+	$("#estado").val("");
+	$("#municipio").val("");
 }
 
 //Función mostrar formulario
@@ -119,8 +127,17 @@ function mostrarSucursales(idsucursal)
 		mostrarformSucursales(true);
 
 		$("#idsucursal").val(data.idsucursal);
+		$("#iddireccion").val(data.iddireccion);
 		$("#nombre").val(data.nombre);
 		$("#telefono").val(data.telefono);
+		$("#colonia").val(data.colonia);
+		$("#calle").val(data.calle);
+		$("#numint").val(data.numint);
+		$("#numext").val(data.numex);
+		$("#cp").val(data.cp);
+		$("#pais").val(data.pais);
+		$("#estado").val(data.estado);
+		$("#municipio").val(data.municipio);
  	})
 }
 
