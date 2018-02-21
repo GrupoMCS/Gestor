@@ -9,6 +9,7 @@
     switch ($_GET["op"]){
 
         case 'guardaryeditarTPersona':
+        echo $idtipo_persona;
             if(empty($idtipo_persona)){
                 $rspta=$tipopersona->insertarTPersona($detalle);
                 echo $rspta?"El \"Tipo de persona\" fue registrado." : "El \"Tipo de persona\" no se registró";

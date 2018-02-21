@@ -14,6 +14,18 @@ function init(){
 	
 }
 
+//Funcion agregar titulo a box de sucursales al abrir el form
+function cambiarTitulo(flag) {
+	if(flag)
+	{
+		document.getElementById("titulo").innerHTML = "Detalles de la sucursal";
+	}
+	else
+	{
+		document.getElementById("titulo").innerHTML = "Sucursales <button class=\"btn btn-success\" id=\"btnagregarSucursales\" onclick=\"mostrarformSucursales(true)\"><i class=\"fa fa-plus-circle\"></i> Agregar</button>";
+	}
+} 
+
 //Función limpiar
 function limpiarSucursales()
 {
@@ -28,6 +40,8 @@ function limpiarSucursales()
 	$("#pais").val("");
 	$("#estado").val("");
 	$("#municipio").val("");
+	cambiarTitulo(false);
+	
 }
 
 //Función mostrar formulario
@@ -40,12 +54,14 @@ function mostrarformSucursales(flag)
 		$("#formularioregistrosSucursales").show();
 		$("#btnGuardarSucursales").prop("disabled",false);
 		$("#btnagregarSucursales").hide();
+		cambiarTitulo(true);
 	}
 	else
 	{
 		$("#listadoregistrosSucursales").show();
 		$("#formularioregistrosSucursales").hide();
 		$("#btnagregarSucursales").show();
+		cambiarTitulo(false);
 	}
 }
 

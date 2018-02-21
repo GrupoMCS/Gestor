@@ -34,23 +34,23 @@
                   <table id="tbllistadoTPersona" class="table table-striped table-bordered table-condensed table-hover">
                     <thead>
                       <th>Opciones</th>
-                      <th>Tipos de Estado</th>
+                      <th>Tipos de Persona</th>
                     </thead>
                     <tbody>
 
                     </tbody>
                     <tfoot>
                       <th>Opciones</th>
-                      <th>Tipos de Estado</th>
+                      <th>Tipos de Persona</th>
                     </tfoot>
                   </table>
               </div>
               <div class="panel-body" id="formularioregistrosTPersona">
                   <form name="formularioTPersona" id="formularioTPersona" method="POST">
                     <div class="form-group ">
-                      <label for="">Nombre de tipo de Estado: </label>
-                      <input type="hidden" name="idstatus" id="idstatus">
-                      <input type="text" name="detalleTPersona" class="form-control" id="detalleTPersona" maxlength="45" placeholder="Nombre de tipo de estado" required>
+                      <label for="">Nombre de tipo de Persona: </label>
+                      <input type="hidden" name="idtipo_persona" id="idtipo_persona">
+                      <input type="text" name="detalleTPersona" class="form-control" id="detalleTPersona" maxlength="45" placeholder="Nombre de tipo de persona" required>
                     </div>
                     <div class="form-group" >
                       <button class="btn btn-primary" type="submit" id="btnGuardarTPersona"><i class="fa fa-save"></i> Guardar</button>

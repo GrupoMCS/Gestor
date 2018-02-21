@@ -22,7 +22,7 @@
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div class="box box-default">
               <div class="box-header with-border" data-widget="collapse">
-                    <h1 class="box-title">Sucursales <button class="btn btn-success" id="btnagregarSucursales" onclick="mostrarformSucursales(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
+                    <h1 class="box-title" id="titulo">Sucursales <button class="btn btn-success" id="btnagregarSucursales" onclick="mostrarformSucursales(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
                   <!--<div class="box-tools pull-right">
                     <i class="fa fa-minus pull-right"></i>
                   </div>-->

@@ -96,7 +96,7 @@ function guardaryeditarTPersona(e)
 	    success: function(datos)
 	    {                    
 			  bootbox.alert(datos);	        
-	          mostrarform(false);
+	          mostrarformTPersona(false);
 	          tabla.ajax.reload();
 	    }
 

@@ -35,8 +35,9 @@
     function limpiarCadena($str){
             global $conexion;
             $str = mysqli_real_escape_string($conexion,trim($str));
-            strtoupper($str);
-            return htmlspecialchars($str);
+            //strtoupper($str);
+            
+            return htmlspecialchars(strtoupper($str));
     }
 ?>
 
